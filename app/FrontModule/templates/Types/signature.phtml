@@ -1,0 +1,32 @@
+@{layout '../@doublepanel.phtml'}
+@{block #left}
+    <h1>{!_"Signatura"} pro typ '{$typeData->name}'</h1>
+    
+          
+   {form formSignature}
+   
+    <fieldset>
+
+         <h3>Identifikační čísla polí, oddělené pomlčkou. Příklad: 12-45-30</h3>
+
+   {input signature}-TYP-ID
+   <br/>
+  
+    </fieldset>
+   
+   <div class="right">
+   {input ok}
+   </div>
+   
+   {/form}
+
+       <br/><br/>
+    
+    <h2>Dostupná pole pro signaturu</h2>
+
+       {widget tableSignatureHelperList}
+
+
+@{/block}
+@{block #right}
+@{/block}

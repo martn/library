@@ -1,0 +1,12 @@
+@{layout '../@doublepanel.phtml'}
+@{block #left}
+    <h1>{!_"Úprava typu položky"}</h1>
+    
+   {control formEdit}
+   
+@{/block}
+
+@{block #right}
+<h2>Možnosti</h2>
+{control editActionsMenu}
+@{/block}

@@ -1,0 +1,1 @@
+__NF|a:4:{s:1:"C";i:0;s:1:"B";s:16:"0.57247257209773";s:4:"DATA";a:2:{s:15:"Nette.Web.User/";a:1:{s:13:"authenticated";N;}s:21:"Nette.Forms.Form/CSRF";a:1:{s:3:"key";s:32:"f449ed70afa1c149c922362db3627283";}}s:4:"META";a:1:{s:21:"Nette.Forms.Form/CSRF";a:1:{s:3:"key";a:2:{s:1:"T";N;s:1:"B";b:1;}}}}

@@ -1,0 +1,17 @@
+{assign $title 'Nastavení'}
+@{extends ../@doublepanel.phtml}
+{block #left}
+    <h1>{!_"Nastavení"}</h1>
+    
+   Pokračujte výběrem v menu...
+
+   
+{/block}
+{block #right}
+{if isset($editor_menu)}
+<h2>{!_"možnosti"}</h2>
+
+    {!$editor_menu}
+   
+{/if} 
+{/block}

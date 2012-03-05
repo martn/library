@@ -1,0 +1,215 @@
+/*******************
+Author: Patrick Ryan
+URL: http://www.agavegroup.com
+
+Feel free to use this however you like.  Credit is always appreciated.
+*******************/
+input,textarea,select {
+	border: 0;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #cdd8de;
+	-moz-border-radius: 3px;
+}
+
+input {
+	height: 22px;
+}
+
+input_big {
+	width: 250px;
+}
+
+input.text {
+	height: 22px;
+	margin: 0 0 5px 0;
+}
+
+select {
+	margin: 0 0 11px 0;
+}
+
+.button {
+	font-family: "Trebuchet MS";
+	font-size: 0.9em;
+	border: none;
+	width: 123px;
+	height: 24px;
+	display: block; color : white;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0;
+	background: url('/images/buttonLarge.png') top left no-repeat;
+	color: white;
+}
+
+a.button {
+	padding: 5px 0 0 0;
+}
+
+fieldset {
+	border: 1px dotted #cdd8de;
+	margin: 0 0 5px 0;
+	padding: 12px 0 0 15px;;
+}
+
+fieldset legend {
+	padding: 0 10px 0 10px;
+	font-size: 0.9em;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+label.required {
+	color: red;
+}
+
+.myform .required input { /*    border: 1px solid red;*/
+	
+}
+
+.clearAll {
+	clear: both;
+}
+
+/***** Shadows that wrap around ALL elements ***********/
+.frmShdwTopLt {
+	float: left;
+	background: url('/images/shadowUpperLeft.gif') top left no-repeat;
+}
+
+.frmShdwBottomRt {
+	float: left;
+	background: url('/images/shadowLowerRight.gif') bottom right no-repeat;
+}
+
+.frmShdwBottomLt {
+	float: left;
+	background: transparent url('/images/shadowBottomLeft.gif') bottom left
+		no-repeat;
+}
+
+.frmShdwTopRt {
+	float: left;
+	background: transparent url('/images/shadowTopRight.gif') top right
+		no-repeat;
+}
+
+/***** styles specific to the CHECKBOX **********/
+.frmShdwCheck {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.frmShdwCheck img {
+	border: 0;
+	margin: 0;
+}
+
+/***** styles specific to the RADIO BUTTONS **********/
+.frmShdwRadio {
+	float: left;
+	margin: 0;
+}
+
+.frmShdwRadio img {
+	border: 0;
+	margin: 0;
+}
+
+/***** styles specific to the SUBMIT BUTTONS **********/
+.frmShdwSubmit {
+	border: 0;
+	background: #f7f7f7 !important;
+	background: transparent;
+	float: left;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.frmShdwSubmit:hover {
+	color: #000000;
+}
+
+/***** styles specific to the SELECT BOX **********/
+.frmShdwSelectDropChosen {
+	margin: 0px;
+	padding: 3px 0 0 5px !important;
+	float: left;
+	height: 19px;
+	border-left: 0px solid #ffffff !important;
+	border-left: 0;
+	display: block;
+	cursor: pointer;
+	/*some stuff for IE*/
+	color: #666666;
+	text-decoration: none;
+	background: url('/images/images/txtinputbg.jpg') no-repeat;
+	font-family: Arial;
+	font-size: 10px;
+	color: #808080;
+	line-height: 14px;
+}
+
+.frmShdwSelectDropShown {
+	margin: 0px;
+	padding: 0 0 0 5px;
+	font-family: Arial;
+	font-size: 10px;
+	color: #808080;
+	line-height: 14px;
+	float: left;
+	position: absolute;
+	background: #ffffff;
+	border-bottom: #ced9df solid 1px;
+	border-left: #ced9df solid 1px;
+	border-right: #ced9df solid 1px;
+	border-top: #ced9df solid 1px;
+}
+
+.frmShdwSelectDrop {
+	display: none;
+}
+
+.fakeSelectImg {
+	border: 0;
+	margin: 0px;
+}
+
+.frmShdwSelectDropShown a {
+	display: block;
+	margin: 0;
+	padding: 0px;
+	border-bottom: 1px dashed #eaeff2;
+	text-decoration: none;
+	color: #666666;
+}
+
+.frmShdwSelectDropShown a.selected {
+	background: #f7f7f7;
+	color: #000000;
+	/*border-bottom:1px dashed #cccccc;*/
+}
+
+.frmShdwSelectDropShown a.selected:after { /*content:" <<";*/
+	
+}
+
+.frmShdwSelectDropShown a:hover {
+	background: #f7f7f7;
+	/*border-bottom:1px dashed #cccccc;*/
+	text-decoration: none;
+	color: #666666;
+}
+
+.frmShdwSelectDropShown a:hover:after { /*content:" <<";*/
+	
+}
+
+.txtInput {
+	margin: 0px;
+	padding: 0px;
+	background: url('/images/txtinputbg.jpg') no-repeat;
+}

@@ -1,0 +1,16 @@
+{assign $title "Vyhledávání"}
+@{extends ../@singlepanel.phtml}
+@{block #panel}
+<h1>{!_"Vyhledávání"}</h1>
+
+   @{widget searchTabControl} 
+
+<br/>
+	
+   {if isset($table)}
+   počet výsledků: {$count}
+	<br/><br/>
+   {!$table}
+   {/if}
+
+@{/block}

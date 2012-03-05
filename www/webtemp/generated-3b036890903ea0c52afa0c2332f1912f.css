@@ -1,0 +1,103 @@
+@CHARSET "UTF-8";
+
+.dataBoxes {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.dataBox {
+	border: 1px dotted silver;
+	padding: 10px;
+	display: block;
+	float: left;
+	margin: 3px;
+	max-width: 100%;
+	min-width: 40%;
+}
+
+.dataBox .item {
+	display: block;
+	float: left;
+	margin: 0 40px 0 0;
+	
+}
+
+.dataBox .item .label {
+	font-size: 1em;
+	font-weight: bold;
+	margin: 0 0 4px 0;
+}
+
+.dataBox .item .data {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+
+
+.dataTable {
+	display: block;
+	float: left;
+	width: 100%;
+	margin: 0 0 15px 0;
+}
+
+
+.dataTable tr td {
+	height: 25px;
+	vertical-align: middle;
+}
+
+.dataTable tr td.label {
+	font-size: 1em;
+	font-weight: bold;
+	padding: 0 7px 0 0;
+}
+
+.dataTable tr td.data {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+
+.dataTable tr td.subrow {
+	padding: 0 0 0 30px;
+}
+
+
+
+.paginator {
+	margin: 1em 0;
+	font-size: 90%;
+}
+
+.paginator a, .paginator span {
+	-moz-border-radius: 3px;
+   -khtml-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+}
+
+.paginator a, .paginator span {
+	margin-right: 0.1em;
+	padding: 0.2em 0.5em;
+	color: #999999;
+}
+
+.paginator a {
+	border: 1px solid #2d9ad2;
+	text-decoration: none;
+	color: #2d9ad2;
+}
+
+.paginator span.noanchor {
+	border: 1px solid #DDDDDD;
+}
+
+.paginator .current {
+	background: #2d9ad2;
+	border: 1px solid #2d9ad2;
+	color: white;
+	font-weight: bold;
+}

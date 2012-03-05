@@ -1,0 +1,15 @@
+<tr class="tr">
+	<td class="first"><div class="innerDiv">{!$actions}&nbsp;</div></td>
+{foreach $columns as $col}
+	<td {if $iterator->first}class="first"{/if}>
+	<div class="innerDiv">{!$control->renderCell($data, $col, $iterator)}</div>
+	</td>
+{/foreach}
+</tr>  
+<tr><td colspan="500">{?$control->renderList()}
+    <br/>
+    <hr/>
+    <br/>
+    </td></tr>
+
+ 

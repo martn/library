@@ -1,0 +1,27 @@
+@{layout '../@doublepanel.phtml'}
+@{block #left}
+    <h1>{!_"Práva - skupina"} {$role->name}</h1>
+    
+{if isset($advanced_menu)}
+<div class="right">
+   {!$advanced_menu}
+</div>
+<br/><br/>
+
+{/if}
+
+
+    {$form->render('begin')}
+
+    @{widget privilegesTabControl}
+
+    <br/>
+        {!$form['id']->getControl()}
+      {!$form['ok']->getControl()}
+      {!$form['cancel']->getControl()}
+      {$form->render('end')}
+
+
+@{/block}
+@{block #right}
+@{/block}

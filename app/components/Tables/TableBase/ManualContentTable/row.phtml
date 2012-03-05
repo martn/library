@@ -1,0 +1,9 @@
+<tr class="tr{$control->getRowNumber()}">
+{foreach $data as $col}
+	<td {if $iterator->first}class="first"{/if}>
+	<div class="innerDiv">{$col}</div>
+	</td>
+{/foreach}
+{for $i=0;$i<$overhead;$i++}<td>&nbsp;</td>{/for}
+	<td class="last">&nbsp;</td>
+</tr>    

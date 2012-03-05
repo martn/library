@@ -1,0 +1,7 @@
+<tr>
+	{? $first=true}
+	{foreach $data->getChilds() as $node}
+	{include @subrow.phtml, 'node'=>$node, 'first'=>$first}
+	{? $first=false}
+	{/foreach}
+</tr>

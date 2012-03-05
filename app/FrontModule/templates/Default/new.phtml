@@ -1,0 +1,13 @@
+@{layout '../@doublepanel.phtml'}
+@{block #left}
+<h1>{!_"Nová položka typu"} {if isset($typeData)}'{$typeData->name}'{/if}</h1>
+
+{snippet formSnippet}
+    {widget formNew}
+{/snippet}
+
+@{/block}
+@{block #right}
+<h2>Možnosti</h2>
+    {widget newActionsMenu}
+@{/block}

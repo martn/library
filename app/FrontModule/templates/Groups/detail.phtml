@@ -1,0 +1,14 @@
+{layout '../@doublepanel.phtml'}
+{block #left}
+    <h1>{!_"Uživatelská skupina"} {$data->name}</h1>
+
+    Popis: {$data->description}
+    
+    <br/>
+    <br/>
+    
+    <hr/>
+    <br/>
+    <h2>{!_"Členové skupiny"}:</h2>
+    {control usersTable}
+{/block}

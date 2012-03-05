@@ -1,0 +1,10 @@
+@{layout '../@doublepanel.phtml'}
+@{block #left}
+<h1>{!_"Uživatelé"}</h1>
+@{control usersList}
+@{/block}
+
+@{block #right}
+<h2>{!_"možnosti"}</h2>
+    @{control defaultActionsMenu}
+@{/block}

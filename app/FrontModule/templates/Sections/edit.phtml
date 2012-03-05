@@ -1,0 +1,17 @@
+{layout '../@doublepanel.phtml'}
+{block #left}
+    <h1>{!_"Úprava sekce"}</h1>
+    
+    {widget formEdit}
+{/block}
+{block #right}
+    {*
+    <h2>{!_$privileges_list_header}</h2>
+    
+    {? $sectionsControl->renderPossiblePrivilegesList($id)}
+    
+    <br/>
+    {$formAddPossiblePrivilege}
+    
+    *}
+{/block}

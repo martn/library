@@ -1,0 +1,7 @@
+{assign $title 'Nový objekt | Mapa'}
+@{extends ../@layout.phtml}
+{block #left}
+    <h1>{!_"Nová mapa"}</h1>
+    
+    {$form}
+{/block}

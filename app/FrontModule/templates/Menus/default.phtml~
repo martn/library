@@ -1,0 +1,17 @@
+{assign $title 'Mapy'}
+@{extends ../@layout.phtml}
+{block #left}
+    <h1>{!_"Mapy"}</h1>
+    
+   {!$table}
+   
+{/block}
+{block #right}
+{if isset($editor_menu)}
+<h2>{!_"možnosti"}</h2>
+    <hr/>
+    <br/>
+    {!$editor_menu}
+   
+{/if} 
+{/block}

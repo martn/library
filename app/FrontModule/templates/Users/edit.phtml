@@ -1,0 +1,11 @@
+@{layout '../@doublepanel.phtml'}
+@{block #left}
+<h1>{!_"Upravit uživatele"} - {$userdata->name} {$userdata->surname}</h1>
+
+    {control formEdit}
+@{/block}
+@{block #right}
+<h2>Možnosti</h2>
+    {widget editActionsMenu}
+    <br/>
+@{/block}

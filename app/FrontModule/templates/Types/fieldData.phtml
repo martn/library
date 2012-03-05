@@ -1,0 +1,37 @@
+@{layout '../@doublepanel.phtml'}
+@{block #left}
+<h1>{!_"Data pro pole"} '{$fieldData->name}'</h1>
+{snippet formSnippet}
+
+    {*widget formSelectData*}
+
+
+   {form formSelectData}
+    
+       {widget formSelectData errors}
+
+<fieldset>
+    <legend>Nadřazené datové pole:</legend>
+    
+       {input parent_data_attribute}
+    
+</fieldset>
+<br/>
+
+       {!$formBody}
+
+<br/>
+       {input ok}{input cancel}
+
+<div style="float: right;">
+       {input finish}
+</div>
+       <div><div>
+             {input parent_data_attribute_submit}
+    </div></div>
+   {/form}
+   
+
+     {/snippet}
+<br/>
+@{/block}

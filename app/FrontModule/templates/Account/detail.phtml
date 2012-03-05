@@ -1,0 +1,19 @@
+{layout '../@doublepanel.phtml'}
+{block #left}
+<h1>{!_"Uživatel"} - {$userdata->name} {$userdata->surname}</h1>
+
+<table class="data">
+<tr><td> {!_"jméno"}: </td><td class="user_info_data">{$userdata->name} {$userdata->surname}</td></tr>
+<tr><td> e-mail: </td><td class="user_info_data"><a href="mailto:{$user->mail}">{$userdata->mail}</a> </td></tr>
+<tr><td> web: </td><td class="user_info_data"><a href="http://{$user->web}" target="_blank">{$userdata->web}</a> </td></tr>
+<tr><td> {!_"tel"}.: </td><td class="user_info_data">{$userdata->tel}</td></tr>
+<tr><td> {!_"adresa"}: </td><td class="user_info_data">{$userdata->adress} </td></tr>
+</table>
+
+{/block}
+
+{block #right}
+<h2>{!_"možnosti"}</h2>
+    {control detailActionsMenu}
+    
+{/block}

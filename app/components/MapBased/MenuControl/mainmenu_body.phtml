@@ -1,0 +1,29 @@
+{if $data!=null}
+	{if $level==0}
+	<ul id="topnav">
+		{foreach $data as $child}
+		<li class="{if $child->countChilds()>0}nav_press{else}unsub{/if}">
+	    	<a href="{plink $child->link}" class="nav_item">{!_$child->name}</a>
+	    	{if $child->countChilds()>0}
+			{include mainmenu_body.phtml, 'data'=>$child->getChilds(), 'level'=>1}
+			{/if}
+		</li>
+		{/foreach}
+	</ul>
+	{/if}
+	{if $level==1}
+		<div class="menu">
+        	<div class="sub_nav_begin">&nbsp;</div>
+         	<ul class="sub_nav">
+         		{foreach $data as $child}
+				<li>
+			    	<a href="{plink $child->link}">{!_$child->name}</a>
+				</li>
+				{/foreach}
+            </ul>
+            <div class="sub_nav_end">&nbsp;</div>
+            <div class="clear">&nbsp;</div>
+        </div>
+         
+	{/if}
+{/if}

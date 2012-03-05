@@ -1,0 +1,210 @@
+textarea {
+    resize: none;
+}
+
+dl {
+    margin: 0;
+}
+
+dl dt {
+    display: block;
+}
+
+dl dd {
+    margin: 0;
+    display: block;
+}
+
+.icon {
+    float: left;
+    display: block;
+    margin: 0 8px 0 0;
+}
+
+.quickmenu ul li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+}
+
+.vertical ul li {
+    display: block;
+    width: 100%;
+    margin: 0 0 12px 0;
+    vertical-align: top;
+}
+
+.quickmenu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.myform {
+    font-size: 1em;
+    color: #555555;
+}
+
+input.date {
+    background: transparent url('/images/calendar.png') no-repeat right center;
+}
+
+.myform dl .input_pair {
+    display: block;
+    float: left;
+    font-size: 1em;
+    margin: 5px 15px 8px 0;
+}
+
+.myform dl .input_pair dt {
+    font-weight: bold;
+    text-align: left;
+    font-size: 12px;
+    font-family: "Trebuchet MS", Arial, Verdana;
+    min-height: 12px;
+    margin: 0 0 4px 0;
+}
+
+
+.myform dl .input_pair .label_with_tooltip {
+    margin: 0 10px 0px 0;
+    display: block;
+    float: left;
+}
+
+.myform dl .input_pair .tooltip {
+    border: 1px solid silver;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+.myform dl .input_pair dd {
+    margin: 0 0 15px 0;
+    text-align: left;
+    font-size: 1em;
+    padding: 0px 0 0 0px;
+}
+
+.myform dl .input_pair dd input {
+
+}
+
+.myform dl .input_pair dd label {
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 0 8px;
+}
+
+.radio-horizontal label, .radio-horizontal input {
+    float: left;
+    display: block;
+}
+
+.radio-horizontal label {
+    margin: 0 20px 0 3px;
+}
+
+.sectionsPrivilegesRadio {
+    margin: 0 0 10px 0;
+    float: left;
+    display: block;
+}
+
+.actions_panel {
+    width: 100%;
+    display: block;
+    text-align: right;
+    margin: 0 0 10px 0;
+}
+
+.right {
+    float: right;
+    text-align: right;
+    display: block;
+}
+
+.privilegesTable tr td input,.privilegesTable tr td label,.privilegesTable tr td br
+{
+    float: left;
+    display: block;
+}
+
+.privilegesTable tr td label {
+    margin: 3px 15px 0 3px;
+}
+
+.data {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.data_desc {
+    margin: 0 10px 0 0;
+}
+
+.dataBoxes fieldset {
+    margin: 0 0 10px 0;
+    padding: 15px 0 10px 0;
+}
+
+.dataBoxes .item {
+    display: block;
+    float: left;
+    margin: 0 0 0 35px;
+}
+
+.dataTable .item {
+    margin: 0 0 0px 0;
+}
+
+.dataTable .group-name {
+    font-size: 5px;
+}
+
+.note {
+    width: 90%;
+    display: block;
+    float: left;
+    padding: 10px;
+    margin: 4px 4px 15px 4px;
+    border: 1px dotted silver;
+    font-size: 1.1em;
+}
+
+.note .label {
+    font-weight: bold;
+    display: block;
+    margin: 0 0 4px 0;
+}
+
+.halfLeft {
+    width: 46%;
+    border-right: 1px solid silver;
+    padding: 0 10px 0 0;
+    margin: 0;
+    display: block;
+    float: left;
+}
+
+.halfRight {
+    width: 46%;
+    margin: 0 0 0 10px;
+    display: block;
+    float: left;
+}
+
+.sharedGroupsTable {
+    width: 80%;
+}
+
+.sharedGroupsTable tr td.tbl {
+    padding: 5px 0 5px 0;
+    border-bottom: 1px solid silver;
+}
+
+.sharedGroupsTable tr td.chkbox {
+    padding: 13px 0 5px 0;
+    vertical-align: top;
+    border-bottom: 1px solid silver;
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /scripts/
+Disallow: /publiclibs/
+Disallow: /js/
+Disallow: /css/
+Disallow: /cache/
+Disallow: /en/summerjazzworkshop/2008/
+Disallow: /cz/letnijazzovadilna/2008/

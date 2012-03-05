@@ -1,0 +1,1748 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="robots" content="noindex,noarchive">
+	<meta name="generator" content="Nette Framework">
+
+	<title>MemberAccessException</title><!-- Call to undefined method DibiResult::toDataSource(). -->
+
+	<style type="text/css">body{margin:0 0 2em;padding:0}#netteBluescreen{font:9pt/1.5 Verdana,sans-serif;background:white;color:#333;position:absolute;left:0;top:0;width:100%;z-index:23178;text-align:left}#netteBluescreen *{color:inherit;background:inherit;text-align:inherit}#netteBluescreenIcon{position:absolute;right:.5em;top:.5em;z-index:23179;text-decoration:none;background:red;padding:3px}#netteBluescreenIcon abbr{color:black!important}#netteBluescreen h1{font:18pt/1.5 Verdana,sans-serif!important;margin:.6em 0}#netteBluescreen h2{font:14pt/1.5 sans-serif!important;color:#888;margin:.6em 0}#netteBluescreen a{text-decoration:none;color:#4197E3}#netteBluescreen a abbr{font-family:sans-serif;color:#999}#netteBluescreen h3{font:bold 10pt/1.5 Verdana,sans-serif!important;margin:1em 0;padding:0}#netteBluescreen p{margin:.8em 0}#netteBluescreen pre,#netteBluescreen code,#netteBluescreen table{font:9pt/1.5 Consolas,monospace!important}#netteBluescreen pre,#netteBluescreen table{background:#fffbcc;padding:.4em .7em;border:1px dotted silver}#netteBluescreen table pre{padding:0;margin:0;border:none}#netteBluescreen pre.dump span{color:#c16549}#netteBluescreen pre.dump a{color:#333}#netteBluescreen div.panel{border-bottom:1px solid #eee;padding:1px 2em}#netteBluescreen div.inner{padding:.1em 1em 1em;background:#f5f5f5}#netteBluescreen table{border-collapse:collapse;width:100%}#netteBluescreen td,#netteBluescreen th{vertical-align:top;text-align:left;padding:2px 3px;border:1px solid #eeb}#netteBluescreen th{width:10%;font-weight:bold}#netteBluescreen .odd,#netteBluescreen .odd pre{background-color:#faf5c3}#netteBluescreen ul{font:7pt/1.5 Verdana,sans-serif!important;padding:1em 2em 50px}#netteBluescreen .highlight,#netteBluescreenError{background:red;color:white;font-weight:bold;font-style:normal;display:block}#netteBluescreen .line{color:#9e9e7e;font-weight:normal;font-style:normal}</style>
+
+
+	<script type="text/javascript">/*<![CDATA[*/document.write("<style> .collapsed { display: none; } </style>");function netteToggle(b,c){for(var e=b.getElementsByTagName("abbr")[0],a=c?document.getElementById(c):b.nextSibling;a.nodeType!==1;)a=a.nextSibling;var d=a.currentStyle?a.currentStyle.display=="none":getComputedStyle(a,null).display=="none";try{e.innerHTML=String.fromCharCode(d?9660:9658)}catch(f){}a.style.display=d?a.tagName.toLowerCase()==="code"?"inline":"block":"none";return true};/*]]>*/</script>
+</head>
+
+
+
+<body>
+<div id="netteBluescreen">
+	<a id="netteBluescreenIcon" href="#" onclick="return !netteToggle(this)"><abbr>&#x25bc;</abbr></a
+
+	><div>
+		<div id="netteBluescreenError" class="panel">
+			<h1>MemberAccessException</h1>
+
+			<p>Call to undefined method DibiResult::toDataSource().</p>
+		</div>
+
+
+
+				
+			
+													<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl1')">Source file <abbr>&#x25bc;</abbr></a></h2>
+
+		<div id="pnl1" class="inner">
+					<p><strong>File:</strong> /Users/martin/Web/library/root/libs/dibi/libs/DibiObject.php &nbsp; <strong>Line:</strong> 125</p>
+				<pre><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 118:</span>    
+<span class='line'>Line 119:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;extension&nbsp;methods
+<span class='line'>Line 120:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d24; font-weight: bold">if&nbsp;(</span><span style="color: #000">$cb&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">self</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">extensionMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">"</span><span style="color: #000">$class</span><span style="color: #080">::</span><span style="color: #000">$name</span><span style="color: #080">"</span><span style="color: #d24; font-weight: bold">))&nbsp;{
+<span class='line'>Line 121:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">array_unshift</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$args</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 122:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #000">call_user_func_array</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$cb</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">$args</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 123:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 124:</span>    
+<span class='highlight'>Line 125:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;/*\*/MemberAccessException("Call&nbsp;to&nbsp;undefined&nbsp;method&nbsp;$class::$name().");
+</span></span><span style="color: #999; font-style: italic"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #000"></span><span style="color: #080"></span><span style="color: #000"></span><span style="color: #080"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 126:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 127:</span>    
+<span class='line'>Line 128:</span>    
+<span class='line'>Line 129:</span>    
+<span class='line'>Line 130:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">/**
+<span class='line'>Line 131:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Call&nbsp;to&nbsp;undefined&nbsp;static&nbsp;method.
+<span class='line'>Line 132:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;&nbsp;string&nbsp;&nbsp;method&nbsp;name&nbsp;(in&nbsp;lower&nbsp;case!)
+</span></span></code></pre>
+					</div>
+	</div>
+				
+
+
+				<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl2')">Call stack <abbr>&#x25bc;</abbr></a></h2>
+
+		<div id="pnl2" class="inner">
+					<ol>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/app/models/ItemsModel.php">models/<b>ItemsModel.php</b></span> (408)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-0')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					DibiObject->					__call
+					(<a href="#" onclick="return !netteToggle(this, 'args1-0')">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="collapsed" id="args1-0">
+						<table>
+						<tr><th>$name</th><td><pre class="dump">"toDataSource" (12)
+</pre></td></tr>
+<tr><th>$args</th><td><pre class="dump"><span>array</span>(0) 
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="collapsed" id="src1-0"><code><span style="color: #06b"><span style="color: #080"><span class='line'>Line 401:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;types.name&nbsp;as&nbsp;type_name,
+<span class='line'>Line 402:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;types.abbr&nbsp;as&nbsp;type_abbrname&nbsp;
+<span class='line'>Line 403:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;"</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #000">self</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">TABLE_ITEMS</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #080">"&nbsp;as&nbsp;items&nbsp;
+<span class='line'>Line 404:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;join&nbsp;"</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #000">self</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">TABLE_ITEMS_FTS</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #080">"&nbsp;as&nbsp;fts&nbsp;on&nbsp;items.id=fts.id
+<span class='line'>Line 405:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;join&nbsp;"</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #000">self</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">TABLE_USERS</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #080">"&nbsp;as&nbsp;users&nbsp;on&nbsp;users.id=items.user_id&nbsp;
+<span class='line'>Line 406:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;join&nbsp;"</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #000">self</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">TABLE_TYPES</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #080">"&nbsp;as&nbsp;types&nbsp;on&nbsp;types.id=items.type_id,&nbsp;
+<span class='line'>Line 407:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to_tsquery('"</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #000">$q</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #080">"')&nbsp;q&nbsp;
+<span class='highlight'>Line 408:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where&nbsp;q&nbsp;@@&nbsp;fts_index&nbsp;order&nbsp;by&nbsp;rank&nbsp;desc")-&gt;toDataSource();
+</span></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 409:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #000">$res</span><span style="color: #d24; font-weight: bold">;
+<span class='line'>Line 410:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class='line'>Line 411:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 412:</span>    
+<span class='line'>Line 413:</span>    &nbsp;&nbsp;&nbsp;&nbsp;
+<span class='line'>Line 414:</span>    &nbsp;&nbsp;&nbsp;&nbsp;
+<span class='line'>Line 415:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">/**
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/app/models/ItemsModel.php">models/<b>ItemsModel.php</b></span> (408)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-1')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					DibiResult->					toDataSource
+					()
+					</p>
+
+					
+
+											<pre class="collapsed" id="src1-1"><code><span style="color: #06b"><span style="color: #080"><span class='line'>Line 401:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;types.name&nbsp;as&nbsp;type_name,
+<span class='line'>Line 402:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;types.abbr&nbsp;as&nbsp;type_abbrname&nbsp;
+<span class='line'>Line 403:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;"</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #000">self</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">TABLE_ITEMS</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #080">"&nbsp;as&nbsp;items&nbsp;
+<span class='line'>Line 404:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;join&nbsp;"</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #000">self</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">TABLE_ITEMS_FTS</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #080">"&nbsp;as&nbsp;fts&nbsp;on&nbsp;items.id=fts.id
+<span class='line'>Line 405:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;join&nbsp;"</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #000">self</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">TABLE_USERS</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #080">"&nbsp;as&nbsp;users&nbsp;on&nbsp;users.id=items.user_id&nbsp;
+<span class='line'>Line 406:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;join&nbsp;"</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #000">self</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">TABLE_TYPES</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #080">"&nbsp;as&nbsp;types&nbsp;on&nbsp;types.id=items.type_id,&nbsp;
+<span class='line'>Line 407:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to_tsquery('"</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #000">$q</span><span style="color: #d24; font-weight: bold">.</span><span style="color: #080">"')&nbsp;q&nbsp;
+<span class='highlight'>Line 408:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where&nbsp;q&nbsp;@@&nbsp;fts_index&nbsp;order&nbsp;by&nbsp;rank&nbsp;desc")-&gt;toDataSource();
+</span></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 409:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #000">$res</span><span style="color: #d24; font-weight: bold">;
+<span class='line'>Line 410:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class='line'>Line 411:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 412:</span>    
+<span class='line'>Line 413:</span>    &nbsp;&nbsp;&nbsp;&nbsp;
+<span class='line'>Line 414:</span>    &nbsp;&nbsp;&nbsp;&nbsp;
+<span class='line'>Line 415:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">/**
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/app/models/ItemsModel.php">models/<b>ItemsModel.php</b></span> (357)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-2')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					ItemsModel->					ftsDataSource
+					(<a href="#" onclick="return !netteToggle(this, 'args1-2')">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="collapsed" id="args1-2">
+						<table>
+						<tr><th>$keywords</th><td><pre class="dump">"david" (5)
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="collapsed" id="src1-2"><code><span style="color: #06b"><span style="color: #999; font-style: italic"><span class='line'>Line 350:</span>    
+<span class='line'>Line 351:</span>    
+<span class='line'>Line 352:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d24; font-weight: bold">function&nbsp;</span><span style="color: #000">getFilteredItems</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$values&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;array())&nbsp;{
+<span class='line'>Line 353:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class='line'>Line 354:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(empty&nbsp;(</span><span style="color: #000">$values</span><span style="color: #d24; font-weight: bold">[</span><span style="color: #080">'fts'</span><span style="color: #d24; font-weight: bold">]))&nbsp;{
+<span class='line'>Line 355:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$dataSource&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">dataSource</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 356:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{
+<span class='highlight'>Line 357:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dataSource&nbsp;=&nbsp;$this-&gt;ftsDataSource($values['fts']);
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 358:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 359:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class='line'>Line 360:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(isset(</span><span style="color: #000">$values</span><span style="color: #d24; font-weight: bold">[</span><span style="color: #080">'user_id'</span><span style="color: #d24; font-weight: bold">]))
+<span class='line'>Line 361:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">$values</span><span style="color: #d24; font-weight: bold">[</span><span style="color: #080">'user_id'</span><span style="color: #d24; font-weight: bold">])&nbsp;{
+<span class='line'>Line 362:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$dataSource&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">$dataSource</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">where</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'user_id=%i'</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">$values</span><span style="color: #d24; font-weight: bold">[</span><span style="color: #080">'user_id'</span><span style="color: #d24; font-weight: bold">]);
+<span class='line'>Line 363:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 364:</span>    
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/app/FrontModule/presenters/DefaultPresenter.php">presenters/<b>DefaultPresenter.php</b></span> (61)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-3')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					ItemsModel->					getFilteredItems
+					(<a href="#" onclick="return !netteToggle(this, 'args1-3')">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="collapsed" id="args1-3">
+						<table>
+						<tr><th>$values</th><td><pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>array</span>(9) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+   "user_id" => ""
+   "type34" => FALSE
+   "type3" => FALSE
+   "type4" => FALSE
+   "type5" => FALSE
+   "type6" => FALSE
+   "type7" => FALSE
+   "fts" => "david" (5)
+   "type8" => FALSE
+}</code>
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="collapsed" id="src1-3"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 54:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$rules&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;array(</span><span style="color: #080">'user_id'&nbsp;</span><span style="color: #d24; font-weight: bold">=&gt;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">user</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getIdentity</span><span style="color: #d24; font-weight: bold">()-&gt;</span><span style="color: #000">data</span><span style="color: #d24; font-weight: bold">[</span><span style="color: #080">'id'</span><span style="color: #d24; font-weight: bold">]);
+<span class='line'>Line 55:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{
+<span class='line'>Line 56:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$rules&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;array();
+<span class='line'>Line 57:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 58:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 59:</span>    
+<span class='line'>Line 60:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">rules&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">$rules</span><span style="color: #d24; font-weight: bold">;
+<span class='highlight'>Line 61:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;dataSource&nbsp;=&nbsp;$this-&gt;modelItems-&gt;getFilteredItems($rules);
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 62:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 63:</span>    
+<span class='line'>Line 64:</span>    &nbsp;&nbsp;&nbsp;&nbsp;
+<span class='line'>Line 65:</span>    &nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #000">actionItems</span><span style="color: #d24; font-weight: bold">()&nbsp;{
+<span class='line'>Line 66:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">actionCheck</span><span style="color: #d24; font-weight: bold">(new&nbsp;</span><span style="color: #000">WebAction</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'search'</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">model</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">),&nbsp;</span><span style="color: #000">true</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #080">'login'</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 67:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//$this-&gt;setBackLink($this-&gt;getAction());
+<span class='line'>Line 68:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d24; font-weight: bold">}
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/app/FrontModule/presenters/DefaultPresenter.php">presenters/<b>DefaultPresenter.php</b></span> (104)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-4')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					Front_DefaultPresenter->					setFilterRule
+					()
+					</p>
+
+					
+
+											<pre class="collapsed" id="src1-4"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line  97:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">template</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">count&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">model</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">dataSource</span><span style="color: #d24; font-weight: bold">()-&gt;</span><span style="color: #000">count</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line  98:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">addTitle</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">"Knihovna"</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line  99:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 100:</span>    
+<span class='line'>Line 101:</span>    &nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #000">renderItems</span><span style="color: #d24; font-weight: bold">()&nbsp;{
+<span class='line'>Line 102:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">addTitle</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'Hledat'</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 103:</span>    
+<span class='highlight'>Line 104:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;setFilterRule();
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 105:</span>    
+<span class='line'>Line 106:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getComponent</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'formFilter'</span><span style="color: #d24; font-weight: bold">)-&gt;</span><span style="color: #000">setDefaults</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">rules</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 107:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getComponent</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'resultTable'</span><span style="color: #d24; font-weight: bold">)-&gt;</span><span style="color: #000">setDataSource</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">dataSource</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 108:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 109:</span>    
+<span class='line'>Line 110:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">/**
+<span class='line'>Line 111:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@desc&nbsp;action&nbsp;for&nbsp;detail
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											&lt;PHP inner-code&gt;
+					
+					
+					Front_DefaultPresenter->					renderItems
+					()
+					</p>
+
+					
+
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/libs/Nette/Reflection/MethodReflection.php">Reflection/<b>MethodReflection.php</b></span> (76)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-6')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					ReflectionMethod->					invokeArgs
+					(<a href="#" onclick="return !netteToggle(this, 'args1-6')">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="collapsed" id="args1-6">
+						<table>
+						<tr><th>$object</th><td><pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>Front_DefaultPresenter</span>(57) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+   "type" => NULL
+   "data" <span>protected</span> => NULL
+   "autoCanonicalize" => FALSE
+   "dataSource" <span>protected</span> => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"rules" <span>protected</span> => <span>array</span>(9) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "user_id" => ""
+      "type34" => FALSE
+      "type3" => FALSE
+      "type4" => FALSE
+      "type5" => FALSE
+      "type6" => FALSE
+      "type7" => FALSE
+      "fts" => "david" (5)
+      "type8" => FALSE
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelPrivileges" <span>protected</span> => <span>PrivilegesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAcl" <span>protected</span> => <span>AclModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>protected</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>protected</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>AttributesModel</span>(2) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>protected</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>AttributesGroupsModel</span>(2) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelTypes" <span>protected</span> => <span>TypesModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      "selects" <span>private</span> => NULL
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>TypesModel</span>(5) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelFiles" <span>protected</span> => <span>FilesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelRoles" <span>protected</span> => <span>Roles</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelAcl" <span>protected</span> => <span>AclModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>protected</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "type" <span>protected</span> => "map" (3)
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMenus" <span>protected</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "type" <span>protected</span> => "menu" (4)
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMapItems" <span>protected</span> => <span>MapItems</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>private</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) { ... }
+         "tree" <span>protected</span> => NULL
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>private</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "type" <span>protected</span> => "map" (3)
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>MapItems</span>(5) { *RECURSION* }
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMenuItems" <span>protected</span> => <span>MapItems</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>private</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) { ... }
+         "tree" <span>protected</span> => NULL
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>private</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "type" <span>protected</span> => "menu" (4)
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>MapItems</span>(5) { *RECURSION* }
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelItems" <span>protected</span> => <span>ItemsModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelTypes" <span>private</span> => <span>TypesModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+         "selects" <span>private</span> => NULL
+         "modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) { ... }
+         "modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) { ... }
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelFiles" <span>private</span> => <span>FilesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelUsers" <span>protected</span> => <span>UsersModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   "oldLayoutMode" => FALSE
+   "oldModuleMode" => FALSE
+   "lang" => "cs" (2)
+   "backlink" => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"user" => <span>MyUser</span>(10) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "guestRole" => "guest" (5)
+      "authenticatedRole" => "authenticated" (13)
+      "onLoggedIn" => NULL
+      "onLoggedOut" => NULL
+      "onAuthenticated" => NULL
+      "onSignedOut" => NULL
+      "authenticationHandler" <span>private</span> => NULL
+      "authorizationHandler" <span>private</span> => NULL
+      "namespace" <span>private</span> => ""
+      <a href='#' onclick='return !netteToggle(this)'>"session" <span>private</span> => <span>NSessionNamespace</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "data" <span>private</span> => <span>array</span>(6) { ... }
+         "meta" <span>private</span> => <span>array</span>(1) { ... }
+         "warnOnUndefined" => FALSE
+      }</code>
+   }</code>
+   "id" => ""
+   <a href='#' onclick='return !netteToggle(this)'>"translator" => <span>Translator</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "countRegexp" => "#\%([0-9]+\$)*d#" (16)
+      "paramsRegexp" => "#\%([0-9]+\$)*[fs]#" (19)
+   }</code>
+   "stage" => 0
+   <a href='#' onclick='return !netteToggle(this)'>"model" => <span>ItemsModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelTypes" <span>private</span> => <span>TypesModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+         "selects" <span>private</span> => NULL
+         "modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) { ... }
+         "modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) { ... }
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelFiles" <span>private</span> => <span>FilesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   "token" => NULL
+   "actionModel" <span>private</span> => NULL
+   "actionName" <span>private</span> => NULL
+   "onShutdown" => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"request" <span>private</span> => <span>NPresenterRequest</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "method" <span>private</span> => "POST" (4)
+      <a href='#' onclick='return !netteToggle(this)'>"flags" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "secured" => FALSE
+      }</code>
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+         "action" => "items" (5)
+         "lang" => "cs" (2)
+         "id" => ""
+         "do" => "formFilter-submit" (17)
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"post" <span>private</span> => <span>array</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "fts" => "david" (5)
+         "user_id" => ""
+         "ok" => "filtrovat" (9)
+      }</code>
+      "files" <span>private</span> => <span>array</span>(0) 
+      "frozen" <span>private</span> => TRUE
+   }</code>
+   "response" <span>private</span> => NULL
+   "phase" <span>private</span> => 4
+   "absoluteUrls" => FALSE
+   "globalParams" <span>private</span> => <span>array</span>(0) 
+   "globalState" <span>private</span> => NULL
+   "globalStateSinces" <span>private</span> => NULL
+   "action" <span>private</span> => "items" (5)
+   "view" <span>private</span> => "items" (5)
+   "layout" <span>private</span> => NULL
+   "payload" <span>private</span> => <span>stdClass</span>(0) 
+   "signalReceiver" <span>private</span> => "formFilter" (10)
+   "signal" <span>private</span> => NULL
+   "ajaxMode" <span>private</span> => FALSE
+   "startupCheck" <span>private</span> => TRUE
+   "lastCreatedRequest" <span>private</span> => NULL
+   "lastCreatedRequestFlag" <span>private</span> => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"template" <span>private</span> => <span>NTemplate</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "file" <span>private</span> => NULL
+      "warnOnUndefined" => TRUE
+      <a href='#' onclick='return !netteToggle(this)'>"onPrepareFilters" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>array</span>(2) [ ... ]
+      ]</code>
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(10) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "component" => <span>Front_DefaultPresenter</span>(57) { *RECURSION* }
+         "control" => <span>Front_DefaultPresenter</span>(57) { *RECURSION* }
+         "presenter" => <span>Front_DefaultPresenter</span>(57) { *RECURSION* }
+         "baseUri" => "/library/root/www/" (18)
+         "basePath" => "/library/root/www" (17)
+         "flashes" => <span>array</span>(0) 
+         "lang" => "cs" (2)
+         "id" => ""
+         "user" => <span>NIdentity</span>(4) { ... }
+         "userAuthenticated" => TRUE
+      }</code>
+      "filters" <span>private</span> => <span>array</span>(0) 
+      <a href='#' onclick='return !netteToggle(this)'>"helpers" <span>private</span> => <span>array</span>(9) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "escape" => <span>NCallback</span>(1) { ... }
+         "escapeurl" => <span>NCallback</span>(1) { ... }
+         "striptags" => <span>NCallback</span>(1) { ... }
+         "nl2br" => <span>NCallback</span>(1) { ... }
+         "substr" => <span>NCallback</span>(1) { ... }
+         "repeat" => <span>NCallback</span>(1) { ... }
+         "implode" => <span>NCallback</span>(1) { ... }
+         "number" => <span>NCallback</span>(1) { ... }
+         "translate" => <span>NCallback</span>(1) { ... }
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"helperLoaders" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>NCallback</span>(1) { ... }
+      ]</code>
+   }</code>
+   "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+   <a href='#' onclick='return !netteToggle(this)'>"params" <span>protected</span> => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+      "action" => "items" (5)
+      "lang" => "cs" (2)
+      "id" => ""
+      "do" => "formFilter-submit" (17)
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"components" <span>private</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"formFilter" => <span>MyForm</span>(20) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "handle" <span>protected</span> => NULL
+         "model" <span>protected</span> => NULL
+         "onSubmit" => NULL
+         "onInvalidSubmit" => NULL
+         "submittedBy" <span>private</span> => <span>NSubmitButton</span>(17) { ... }
+         "httpData" <span>private</span> => <span>array</span>(3) { ... }
+         "element" <span>private</span> => <span>NHtml</span>(4) { ... }
+         "renderer" <span>private</span> => <span>AdvancedRenderer</span>(4) { ... }
+         "translator" <span>private</span> => NULL
+         "groups" <span>private</span> => <span>array</span>(3) { ... }
+         "errors" <span>private</span> => <span>array</span>(0) 
+         "encoding" <span>private</span> => "UTF-8" (5)
+         "onValidate" => NULL
+         "currentGroup" <span>protected</span> => NULL
+         "valid" <span>protected</span> => TRUE
+         "components" <span>private</span> => <span>array</span>(10) { ... }
+         "cloning" <span>private</span> => NULL
+         "parent" <span>private</span> => <span>Front_DefaultPresenter</span>(57) { *RECURSION* }
+         "name" <span>private</span> => "formFilter" (10)
+         "monitors" <span>private</span> => <span>array</span>(2) { ... }
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"header" => <span>HeaderControl</span>(20) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "docType" <span>private</span> => "html5" (5)
+         "xml" <span>private</span> => FALSE
+         "language" <span>private</span> => "cz" (2)
+         "title" <span>private</span> => "Knihovna" (8)
+         "titleSeparator" <span>private</span> => " | " (3)
+         "titlesReverseOrder" <span>private</span> => TRUE
+         "titles" <span>private</span> => <span>array</span>(1) [ ... ]
+         "rssChannels" <span>private</span> => <span>array</span>(0) 
+         "metaTags" <span>private</span> => <span>array</span>(3) { ... }
+         "contentType" <span>private</span> => "text/html" (9)
+         "forceContentType" <span>private</span> => FALSE
+         "favicon" <span>private</span> => NULL
+         "template" <span>private</span> => NULL
+         "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+         "params" <span>protected</span> => <span>array</span>(0) 
+         "components" <span>private</span> => <span>array</span>(2) { ... }
+         "cloning" <span>private</span> => NULL
+         "parent" <span>private</span> => <span>Front_DefaultPresenter</span>(57) { *RECURSION* }
+         "name" <span>private</span> => "header" (6)
+         "monitors" <span>private</span> => <span>array</span>(0) 
+      }</code>
+   }</code>
+   "cloning" <span>private</span> => NULL
+   "parent" <span>private</span> => NULL
+   "name" <span>private</span> => "Front:Default" (13)
+   <a href='#' onclick='return !netteToggle(this)'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"NPresenter" => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => NULL
+         1 => NULL
+         2 => NULL
+         3 => TRUE
+      ]</code>
+   }</code>
+}</code>
+</pre></td></tr>
+<tr><th>$args</th><td><pre class="dump"><span>array</span>(0) 
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="collapsed" id="src1-6"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 69:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">settype</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$val</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">gettype</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$def</span><span style="color: #d24; font-weight: bold">));
+<span class='line'>Line 70:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 71:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$res</span><span style="color: #d24; font-weight: bold">[</span><span style="color: #000">$i</span><span style="color: #d24; font-weight: bold">++]&nbsp;=&nbsp;</span><span style="color: #000">$val</span><span style="color: #d24; font-weight: bold">;
+<span class='line'>Line 72:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{
+<span class='line'>Line 73:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$res</span><span style="color: #d24; font-weight: bold">[</span><span style="color: #000">$i</span><span style="color: #d24; font-weight: bold">++]&nbsp;=&nbsp;</span><span style="color: #000">$def</span><span style="color: #d24; font-weight: bold">;
+<span class='line'>Line 74:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 75:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='highlight'>Line 76:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$this-&gt;invokeArgs($object,&nbsp;$res);
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 77:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 78:</span>    
+<span class='line'>Line 79:</span>    
+<span class='line'>Line 80:</span>    
+<span class='line'>Line 81:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">/**
+<span class='line'>Line 82:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;NCallback
+<span class='line'>Line 83:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/libs/Nette/Application/PresenterComponent.php">Application/<b>PresenterComponent.php</b></span> (94)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-7')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					NMethodReflection->					invokeNamedArgs
+					(<a href="#" onclick="return !netteToggle(this, 'args1-7')">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="collapsed" id="args1-7">
+						<table>
+						<tr><th>$object</th><td><pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>Front_DefaultPresenter</span>(57) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+   "type" => NULL
+   "data" <span>protected</span> => NULL
+   "autoCanonicalize" => FALSE
+   "dataSource" <span>protected</span> => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"rules" <span>protected</span> => <span>array</span>(9) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "user_id" => ""
+      "type34" => FALSE
+      "type3" => FALSE
+      "type4" => FALSE
+      "type5" => FALSE
+      "type6" => FALSE
+      "type7" => FALSE
+      "fts" => "david" (5)
+      "type8" => FALSE
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelPrivileges" <span>protected</span> => <span>PrivilegesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAcl" <span>protected</span> => <span>AclModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>protected</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>protected</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>AttributesModel</span>(2) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>protected</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>AttributesGroupsModel</span>(2) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelTypes" <span>protected</span> => <span>TypesModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      "selects" <span>private</span> => NULL
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>TypesModel</span>(5) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelFiles" <span>protected</span> => <span>FilesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelRoles" <span>protected</span> => <span>Roles</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelAcl" <span>protected</span> => <span>AclModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>protected</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "type" <span>protected</span> => "map" (3)
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMenus" <span>protected</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "type" <span>protected</span> => "menu" (4)
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMapItems" <span>protected</span> => <span>MapItems</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>private</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) { ... }
+         "tree" <span>protected</span> => NULL
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>private</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "type" <span>protected</span> => "map" (3)
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>MapItems</span>(5) { *RECURSION* }
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMenuItems" <span>protected</span> => <span>MapItems</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>private</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) { ... }
+         "tree" <span>protected</span> => NULL
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>private</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "type" <span>protected</span> => "menu" (4)
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>MapItems</span>(5) { *RECURSION* }
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelItems" <span>protected</span> => <span>ItemsModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelTypes" <span>private</span> => <span>TypesModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+         "selects" <span>private</span> => NULL
+         "modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) { ... }
+         "modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) { ... }
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelFiles" <span>private</span> => <span>FilesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelUsers" <span>protected</span> => <span>UsersModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   "oldLayoutMode" => FALSE
+   "oldModuleMode" => FALSE
+   "lang" => "cs" (2)
+   "backlink" => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"user" => <span>MyUser</span>(10) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "guestRole" => "guest" (5)
+      "authenticatedRole" => "authenticated" (13)
+      "onLoggedIn" => NULL
+      "onLoggedOut" => NULL
+      "onAuthenticated" => NULL
+      "onSignedOut" => NULL
+      "authenticationHandler" <span>private</span> => NULL
+      "authorizationHandler" <span>private</span> => NULL
+      "namespace" <span>private</span> => ""
+      <a href='#' onclick='return !netteToggle(this)'>"session" <span>private</span> => <span>NSessionNamespace</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "data" <span>private</span> => <span>array</span>(6) { ... }
+         "meta" <span>private</span> => <span>array</span>(1) { ... }
+         "warnOnUndefined" => FALSE
+      }</code>
+   }</code>
+   "id" => ""
+   <a href='#' onclick='return !netteToggle(this)'>"translator" => <span>Translator</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "countRegexp" => "#\%([0-9]+\$)*d#" (16)
+      "paramsRegexp" => "#\%([0-9]+\$)*[fs]#" (19)
+   }</code>
+   "stage" => 0
+   <a href='#' onclick='return !netteToggle(this)'>"model" => <span>ItemsModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelTypes" <span>private</span> => <span>TypesModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+         "selects" <span>private</span> => NULL
+         "modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) { ... }
+         "modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) { ... }
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelFiles" <span>private</span> => <span>FilesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   "token" => NULL
+   "actionModel" <span>private</span> => NULL
+   "actionName" <span>private</span> => NULL
+   "onShutdown" => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"request" <span>private</span> => <span>NPresenterRequest</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "method" <span>private</span> => "POST" (4)
+      <a href='#' onclick='return !netteToggle(this)'>"flags" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "secured" => FALSE
+      }</code>
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+         "action" => "items" (5)
+         "lang" => "cs" (2)
+         "id" => ""
+         "do" => "formFilter-submit" (17)
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"post" <span>private</span> => <span>array</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "fts" => "david" (5)
+         "user_id" => ""
+         "ok" => "filtrovat" (9)
+      }</code>
+      "files" <span>private</span> => <span>array</span>(0) 
+      "frozen" <span>private</span> => TRUE
+   }</code>
+   "response" <span>private</span> => NULL
+   "phase" <span>private</span> => 4
+   "absoluteUrls" => FALSE
+   "globalParams" <span>private</span> => <span>array</span>(0) 
+   "globalState" <span>private</span> => NULL
+   "globalStateSinces" <span>private</span> => NULL
+   "action" <span>private</span> => "items" (5)
+   "view" <span>private</span> => "items" (5)
+   "layout" <span>private</span> => NULL
+   "payload" <span>private</span> => <span>stdClass</span>(0) 
+   "signalReceiver" <span>private</span> => "formFilter" (10)
+   "signal" <span>private</span> => NULL
+   "ajaxMode" <span>private</span> => FALSE
+   "startupCheck" <span>private</span> => TRUE
+   "lastCreatedRequest" <span>private</span> => NULL
+   "lastCreatedRequestFlag" <span>private</span> => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"template" <span>private</span> => <span>NTemplate</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "file" <span>private</span> => NULL
+      "warnOnUndefined" => TRUE
+      <a href='#' onclick='return !netteToggle(this)'>"onPrepareFilters" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>array</span>(2) [ ... ]
+      ]</code>
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(10) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "component" => <span>Front_DefaultPresenter</span>(57) { *RECURSION* }
+         "control" => <span>Front_DefaultPresenter</span>(57) { *RECURSION* }
+         "presenter" => <span>Front_DefaultPresenter</span>(57) { *RECURSION* }
+         "baseUri" => "/library/root/www/" (18)
+         "basePath" => "/library/root/www" (17)
+         "flashes" => <span>array</span>(0) 
+         "lang" => "cs" (2)
+         "id" => ""
+         "user" => <span>NIdentity</span>(4) { ... }
+         "userAuthenticated" => TRUE
+      }</code>
+      "filters" <span>private</span> => <span>array</span>(0) 
+      <a href='#' onclick='return !netteToggle(this)'>"helpers" <span>private</span> => <span>array</span>(9) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "escape" => <span>NCallback</span>(1) { ... }
+         "escapeurl" => <span>NCallback</span>(1) { ... }
+         "striptags" => <span>NCallback</span>(1) { ... }
+         "nl2br" => <span>NCallback</span>(1) { ... }
+         "substr" => <span>NCallback</span>(1) { ... }
+         "repeat" => <span>NCallback</span>(1) { ... }
+         "implode" => <span>NCallback</span>(1) { ... }
+         "number" => <span>NCallback</span>(1) { ... }
+         "translate" => <span>NCallback</span>(1) { ... }
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"helperLoaders" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>NCallback</span>(1) { ... }
+      ]</code>
+   }</code>
+   "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+   <a href='#' onclick='return !netteToggle(this)'>"params" <span>protected</span> => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+      "action" => "items" (5)
+      "lang" => "cs" (2)
+      "id" => ""
+      "do" => "formFilter-submit" (17)
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"components" <span>private</span> => <span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"formFilter" => <span>MyForm</span>(20) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "handle" <span>protected</span> => NULL
+         "model" <span>protected</span> => NULL
+         "onSubmit" => NULL
+         "onInvalidSubmit" => NULL
+         "submittedBy" <span>private</span> => <span>NSubmitButton</span>(17) { ... }
+         "httpData" <span>private</span> => <span>array</span>(3) { ... }
+         "element" <span>private</span> => <span>NHtml</span>(4) { ... }
+         "renderer" <span>private</span> => <span>AdvancedRenderer</span>(4) { ... }
+         "translator" <span>private</span> => NULL
+         "groups" <span>private</span> => <span>array</span>(3) { ... }
+         "errors" <span>private</span> => <span>array</span>(0) 
+         "encoding" <span>private</span> => "UTF-8" (5)
+         "onValidate" => NULL
+         "currentGroup" <span>protected</span> => NULL
+         "valid" <span>protected</span> => TRUE
+         "components" <span>private</span> => <span>array</span>(10) { ... }
+         "cloning" <span>private</span> => NULL
+         "parent" <span>private</span> => <span>Front_DefaultPresenter</span>(57) { *RECURSION* }
+         "name" <span>private</span> => "formFilter" (10)
+         "monitors" <span>private</span> => <span>array</span>(2) { ... }
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"header" => <span>HeaderControl</span>(20) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "docType" <span>private</span> => "html5" (5)
+         "xml" <span>private</span> => FALSE
+         "language" <span>private</span> => "cz" (2)
+         "title" <span>private</span> => "Knihovna" (8)
+         "titleSeparator" <span>private</span> => " | " (3)
+         "titlesReverseOrder" <span>private</span> => TRUE
+         "titles" <span>private</span> => <span>array</span>(1) [ ... ]
+         "rssChannels" <span>private</span> => <span>array</span>(0) 
+         "metaTags" <span>private</span> => <span>array</span>(3) { ... }
+         "contentType" <span>private</span> => "text/html" (9)
+         "forceContentType" <span>private</span> => FALSE
+         "favicon" <span>private</span> => NULL
+         "template" <span>private</span> => NULL
+         "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+         "params" <span>protected</span> => <span>array</span>(0) 
+         "components" <span>private</span> => <span>array</span>(2) { ... }
+         "cloning" <span>private</span> => NULL
+         "parent" <span>private</span> => <span>Front_DefaultPresenter</span>(57) { *RECURSION* }
+         "name" <span>private</span> => "header" (6)
+         "monitors" <span>private</span> => <span>array</span>(0) 
+      }</code>
+   }</code>
+   "cloning" <span>private</span> => NULL
+   "parent" <span>private</span> => NULL
+   "name" <span>private</span> => "Front:Default" (13)
+   <a href='#' onclick='return !netteToggle(this)'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"NPresenter" => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => NULL
+         1 => NULL
+         2 => NULL
+         3 => TRUE
+      ]</code>
+   }</code>
+}</code>
+</pre></td></tr>
+<tr><th>$args</th><td><pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+   "action" => "items" (5)
+   "lang" => "cs" (2)
+   "id" => ""
+   "do" => "formFilter-submit" (17)
+}</code>
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="collapsed" id="src1-7"><code><span style="color: #06b"><span style="color: #999; font-style: italic"><span class='line'>Line  87:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/
+<span class='line'>Line  88:</span>    &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d24; font-weight: bold">protected&nbsp;function&nbsp;</span><span style="color: #000">tryCall</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$method</span><span style="color: #d24; font-weight: bold">,&nbsp;array&nbsp;</span><span style="color: #000">$params</span><span style="color: #d24; font-weight: bold">)
+<span class='line'>Line  89:</span>    &nbsp;&nbsp;&nbsp;&nbsp;{
+<span class='line'>Line  90:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$rc&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getReflection</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line  91:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">$rc</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">hasMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$method</span><span style="color: #d24; font-weight: bold">))&nbsp;{
+<span class='line'>Line  92:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$rm&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">$rc</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$method</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line  93:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">$rm</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">isPublic</span><span style="color: #d24; font-weight: bold">()&nbsp;&amp;&amp;&nbsp;!</span><span style="color: #000">$rm</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">isAbstract</span><span style="color: #d24; font-weight: bold">()&nbsp;&amp;&amp;&nbsp;!</span><span style="color: #000">$rm</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">isStatic</span><span style="color: #d24; font-weight: bold">())&nbsp;{
+<span class='highlight'>Line  94:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$rm-&gt;invokeNamedArgs($this,&nbsp;$params);
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line  95:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #000">TRUE</span><span style="color: #d24; font-weight: bold">;
+<span class='line'>Line  96:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line  97:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line  98:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #000">FALSE</span><span style="color: #d24; font-weight: bold">;
+<span class='line'>Line  99:</span>    &nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 100:</span>    
+<span class='line'>Line 101:</span>    
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/libs/Nette/Application/Presenter.php">Application/<b>Presenter.php</b></span> (205)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-8')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					NPresenterComponent->					tryCall
+					(<a href="#" onclick="return !netteToggle(this, 'args1-8')">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="collapsed" id="args1-8">
+						<table>
+						<tr><th>$method</th><td><pre class="dump">"renderitems" (11)
+</pre></td></tr>
+<tr><th>$params</th><td><pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+   "action" => "items" (5)
+   "lang" => "cs" (2)
+   "id" => ""
+   "do" => "formFilter-submit" (17)
+}</code>
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="collapsed" id="src1-8"><code><span style="color: #06b"><span style="color: #999; font-style: italic"><span class='line'>Line 198:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">processSignal</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 199:</span>    
+<span class='line'>Line 200:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;PHASE&nbsp;3:&nbsp;RENDERING&nbsp;VIEW
+<span class='line'>Line 201:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">phase&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">self</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">PHASE_RENDER</span><span style="color: #d24; font-weight: bold">;
+<span class='line'>Line 202:</span>    
+<span class='line'>Line 203:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">beforeRender</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 204:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;calls&nbsp;$this-&gt;render&lt;View&gt;()
+<span class='highlight'>Line 205:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;tryCall($this-&gt;formatRenderMethod($this-&gt;getView()),&nbsp;$this-&gt;params);
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 206:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">afterRender</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 207:</span>    
+<span class='line'>Line 208:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;save&nbsp;component&nbsp;tree&nbsp;persistent&nbsp;state
+<span class='line'>Line 209:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">saveGlobalState</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 210:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">isAjax</span><span style="color: #d24; font-weight: bold">())&nbsp;{
+<span class='line'>Line 211:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">payload</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">state&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getGlobalState</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 212:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/libs/Nette/Application/Application.php">Application/<b>Application.php</b></span> (144)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-9')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					NPresenter->					run
+					(<a href="#" onclick="return !netteToggle(this, 'args1-9')">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="collapsed" id="args1-9">
+						<table>
+						<tr><th>$request</th><td><pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>NPresenterRequest</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+   "method" <span>private</span> => "POST" (4)
+   <a href='#' onclick='return !netteToggle(this)'>"flags" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "secured" => FALSE
+   }</code>
+   "name" <span>private</span> => "Front:Default" (13)
+   <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+      "action" => "items" (5)
+      "lang" => "cs" (2)
+      "id" => ""
+      "do" => "formFilter-submit" (17)
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"post" <span>private</span> => <span>array</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      "fts" => "david" (5)
+      "user_id" => ""
+      "ok" => "filtrovat" (9)
+   }</code>
+   "files" <span>private</span> => <span>array</span>(0) 
+   "frozen" <span>private</span> => TRUE
+}</code>
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="collapsed" id="src1-9"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 137:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(</span><span style="color: #000">NInvalidPresenterException&nbsp;$e</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+<span class='line'>Line 138:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;</span><span style="color: #000">NBadRequestException</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$e</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getMessage</span><span style="color: #d24; font-weight: bold">(),&nbsp;</span><span style="color: #000">404</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">$e</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 139:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 140:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$request</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">freeze</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 141:</span>    
+<span class='line'>Line 142:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;Execute&nbsp;presenter
+<span class='line'>Line 143:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">presenter&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;new&nbsp;</span><span style="color: #000">$class</span><span style="color: #d24; font-weight: bold">;
+<span class='highlight'>Line 144:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$response&nbsp;=&nbsp;$this-&gt;presenter-&gt;run($request);
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 145:</span>    
+<span class='line'>Line 146:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;Send&nbsp;response
+<span class='line'>Line 147:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d24; font-weight: bold">if&nbsp;(</span><span style="color: #000">$response&nbsp;</span><span style="color: #d24; font-weight: bold">instanceof&nbsp;</span><span style="color: #000">NForwardingResponse</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+<span class='line'>Line 148:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$request&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">$response</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getRequest</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 149:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;
+<span class='line'>Line 150:</span>    
+<span class='line'>Line 151:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;elseif&nbsp;(</span><span style="color: #000">$response&nbsp;</span><span style="color: #d24; font-weight: bold">instanceof&nbsp;</span><span style="color: #000">IPresenterResponse</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/app/bootstrap.php">app/<b>bootstrap.php</b></span> (132)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-10')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					NApplication->					run
+					()
+					</p>
+
+					
+
+											<pre class="collapsed" id="src1-10"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 125:</span>    </span><span style="color: #000">NFormContainer</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">extensionMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'NFormContainer::addRequestButtonBack'</span><span style="color: #d24; font-weight: bold">,&nbsp;array(</span><span style="color: #080">'RequestButtonHelper'</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #080">'addRequestButtonBack'</span><span style="color: #d24; font-weight: bold">));
+<span class='line'>Line 126:</span>    </span><span style="color: #000">NFormContainer</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">extensionMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">"NFormContainer::addDependentSelectBox"</span><span style="color: #d24; font-weight: bold">,&nbsp;array(</span><span style="color: #080">"DependentSelectBox"</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #080">"formAddDependentSelectBox"</span><span style="color: #d24; font-weight: bold">));
+<span class='line'>Line 127:</span>    </span><span style="color: #000">NFormContainer</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">extensionMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'NFormContainer::addDatePicker'</span><span style="color: #d24; font-weight: bold">,&nbsp;array(</span><span style="color: #080">"DatePicker"</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #080">"addDatePicker"</span><span style="color: #d24; font-weight: bold">));
+<span class='line'>Line 128:</span>    </span><span style="color: #000">FormMacros</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">register</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 129:</span>    
+<span class='line'>Line 130:</span>    
+<span class='line'>Line 131:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;Step&nbsp;5:&nbsp;Run&nbsp;the&nbsp;application!
+<span class='highlight'>Line 132:    $application-&gt;run();
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/www/index.php">www/<b>index.php</b></span> (31)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-11')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+										require
+					(<a href="#" onclick="return !netteToggle(this, 'args1-11')">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="collapsed" id="args1-11">
+						<table>
+						<tr><th>#0</th><td><pre class="dump">"/Users/martin/Web/library/root/app/bootstrap.php" (48)
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="collapsed" id="src1-11"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 24:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;absolute&nbsp;filesystem&nbsp;path&nbsp;to&nbsp;the&nbsp;models&nbsp;root
+<span class='line'>Line 25:</span>    </span><span style="color: #000">define</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'MODELS_DIR'</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">APP_DIR&nbsp;</span><span style="color: #d24; font-weight: bold">.&nbsp;</span><span style="color: #080">'/models'</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 26:</span>    
+<span class='line'>Line 27:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;absolute&nbsp;filesystem&nbsp;path&nbsp;to&nbsp;the&nbsp;locale&nbsp;
+<span class='line'>Line 28:</span>    </span><span style="color: #000">define</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'LOCALE_DIR'</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">APP_DIR&nbsp;</span><span style="color: #d24; font-weight: bold">.&nbsp;</span><span style="color: #080">'/locale'</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 29:</span>    
+<span class='line'>Line 30:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;load&nbsp;bootstrap&nbsp;file
+<span class='highlight'>Line 31:    require&nbsp;APP_DIR&nbsp;.&nbsp;'/bootstrap.php';
+</span></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #d24; font-weight: bold"></span></span></code></pre>
+					
+					</li>
+					
+									</ol>
+					</div>
+	</div>
+	
+
+
+			
+
+
+			
+				
+
+
+					<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl3')">Nette Application <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="pnl3" class="collapsed inner">
+				<h3>Requests</h3>
+			<pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>[
+   <a href='#' onclick='return !netteToggle(this)'>0 => <span>NPresenterRequest</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "method" <span>private</span> => "POST" (4)
+      <a href='#' onclick='return !netteToggle(this)'>"flags" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "secured" => FALSE
+      }</code>
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+         "action" => "items" (5)
+         "lang" => "cs" (2)
+         "id" => ""
+         "do" => "formFilter-submit" (17)
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"post" <span>private</span> => <span>array</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "fts" => "david" (5)
+         "user_id" => ""
+         "ok" => "filtrovat" (9)
+      }</code>
+      "files" <span>private</span> => <span>array</span>(0) 
+      "frozen" <span>private</span> => TRUE
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>1 => <span>NPresenterRequest</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "method" <span>private</span> => "FORWARD" (7)
+      "flags" <span>private</span> => <span>array</span>(0) 
+      "name" <span>private</span> => "Error" (5)
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "exception" => <span>MemberAccessException</span>(7) { ... }
+      }</code>
+      "post" <span>private</span> => <span>array</span>(0) 
+      "files" <span>private</span> => <span>array</span>(0) 
+      "frozen" <span>private</span> => TRUE
+   }</code>
+]</code>
+</pre>
+			<h3>Presenter</h3>
+			<pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>ErrorPresenter</span>(53) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+   <a href='#' onclick='return !netteToggle(this)'>"modelPrivileges" <span>protected</span> => <span>PrivilegesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAcl" <span>protected</span> => <span>AclModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>protected</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>protected</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>AttributesModel</span>(2) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>protected</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>AttributesGroupsModel</span>(2) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelTypes" <span>protected</span> => <span>TypesModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      "selects" <span>private</span> => NULL
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>TypesModel</span>(5) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelFiles" <span>protected</span> => <span>FilesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelRoles" <span>protected</span> => <span>Roles</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelAcl" <span>protected</span> => <span>AclModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>protected</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "type" <span>protected</span> => "map" (3)
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMenus" <span>protected</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "type" <span>protected</span> => "menu" (4)
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMapItems" <span>protected</span> => <span>MapItems</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>private</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) { ... }
+         "tree" <span>protected</span> => NULL
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>private</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "type" <span>protected</span> => "map" (3)
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>MapItems</span>(5) { *RECURSION* }
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMenuItems" <span>protected</span> => <span>MapItems</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>private</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) { ... }
+         "tree" <span>protected</span> => NULL
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>private</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "type" <span>protected</span> => "menu" (4)
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>MapItems</span>(5) { *RECURSION* }
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelItems" <span>protected</span> => <span>ItemsModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelTypes" <span>private</span> => <span>TypesModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+         "selects" <span>private</span> => NULL
+         "modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) { ... }
+         "modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) { ... }
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelFiles" <span>private</span> => <span>FilesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelUsers" <span>protected</span> => <span>UsersModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   "oldLayoutMode" => FALSE
+   "oldModuleMode" => FALSE
+   "lang" => "cs" (2)
+   "backlink" => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"user" => <span>MyUser</span>(10) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "guestRole" => "guest" (5)
+      "authenticatedRole" => "authenticated" (13)
+      "onLoggedIn" => NULL
+      "onLoggedOut" => NULL
+      "onAuthenticated" => NULL
+      "onSignedOut" => NULL
+      "authenticationHandler" <span>private</span> => NULL
+      "authorizationHandler" <span>private</span> => NULL
+      "namespace" <span>private</span> => ""
+      <a href='#' onclick='return !netteToggle(this)'>"session" <span>private</span> => <span>NSessionNamespace</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "data" <span>private</span> => <span>array</span>(6) { ... }
+         "meta" <span>private</span> => <span>array</span>(1) { ... }
+         "warnOnUndefined" => FALSE
+      }</code>
+   }</code>
+   "id" => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"translator" => <span>Translator</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "countRegexp" => "#\%([0-9]+\$)*d#" (16)
+      "paramsRegexp" => "#\%([0-9]+\$)*[fs]#" (19)
+   }</code>
+   "stage" => 0
+   "model" => NULL
+   "token" => NULL
+   "actionModel" <span>private</span> => NULL
+   "actionName" <span>private</span> => NULL
+   "onShutdown" => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"request" <span>private</span> => <span>NPresenterRequest</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "method" <span>private</span> => "FORWARD" (7)
+      "flags" <span>private</span> => <span>array</span>(0) 
+      "name" <span>private</span> => "Error" (5)
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "exception" => <span>MemberAccessException</span>(7) { ... }
+      }</code>
+      "post" <span>private</span> => <span>array</span>(0) 
+      "files" <span>private</span> => <span>array</span>(0) 
+      "frozen" <span>private</span> => TRUE
+   }</code>
+   "response" <span>private</span> => NULL
+   "phase" <span>private</span> => 4
+   "autoCanonicalize" => TRUE
+   "absoluteUrls" => FALSE
+   "globalParams" <span>private</span> => <span>array</span>(0) 
+   "globalState" <span>private</span> => NULL
+   "globalStateSinces" <span>private</span> => NULL
+   "action" <span>private</span> => "default" (7)
+   "view" <span>private</span> => "500" (3)
+   "layout" <span>private</span> => NULL
+   "payload" <span>private</span> => <span>stdClass</span>(0) 
+   "signalReceiver" <span>private</span> => ""
+   "signal" <span>private</span> => NULL
+   "ajaxMode" <span>private</span> => FALSE
+   "startupCheck" <span>private</span> => TRUE
+   "lastCreatedRequest" <span>private</span> => NULL
+   "lastCreatedRequestFlag" <span>private</span> => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"template" <span>private</span> => <span>NTemplate</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "file" <span>private</span> => NULL
+      "warnOnUndefined" => TRUE
+      <a href='#' onclick='return !netteToggle(this)'>"onPrepareFilters" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>array</span>(2) [ ... ]
+      ]</code>
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(12) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "component" => <span>ErrorPresenter</span>(53) { *RECURSION* }
+         "control" => <span>ErrorPresenter</span>(53) { *RECURSION* }
+         "presenter" => <span>ErrorPresenter</span>(53) { *RECURSION* }
+         "baseUri" => "/library/root/www/" (18)
+         "basePath" => "/library/root/www" (17)
+         "flashes" => <span>array</span>(0) 
+         "lang" => "cs" (2)
+         "id" => NULL
+         "user" => <span>NIdentity</span>(4) { ... }
+         "userAuthenticated" => TRUE
+         "robots" => "noindex,noarchive" (17)
+         "title" => "500 Internal Server Error" (25)
+      }</code>
+      "filters" <span>private</span> => <span>array</span>(0) 
+      <a href='#' onclick='return !netteToggle(this)'>"helpers" <span>private</span> => <span>array</span>(9) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "escape" => <span>NCallback</span>(1) { ... }
+         "escapeurl" => <span>NCallback</span>(1) { ... }
+         "striptags" => <span>NCallback</span>(1) { ... }
+         "nl2br" => <span>NCallback</span>(1) { ... }
+         "substr" => <span>NCallback</span>(1) { ... }
+         "repeat" => <span>NCallback</span>(1) { ... }
+         "implode" => <span>NCallback</span>(1) { ... }
+         "number" => <span>NCallback</span>(1) { ... }
+         "translate" => <span>NCallback</span>(1) { ... }
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"helperLoaders" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>NCallback</span>(1) { ... }
+      ]</code>
+   }</code>
+   "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+   <a href='#' onclick='return !netteToggle(this)'>"params" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"exception" => <span>MemberAccessException</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "message" <span>protected</span> => "Call to undefined method DibiResult::toDataSource()." (52)
+         "string" <span>private</span> => "exception 'MemberAccessException' with message 'Call to undefined method DibiResult::toDataSource().' in /Users/martin/Web/library/root/libs/dibi/libs ... " (1530)
+         "code" <span>protected</span> => 0
+         "file" <span>protected</span> => "/Users/martin/Web/library/root/libs/dibi/libs/DibiObject.php" (60)
+         "line" <span>protected</span> => 125
+         "trace" <span>private</span> => <span>array</span>(12) [ ... ]
+         "previous" <span>private</span> => NULL
+      }</code>
+   }</code>
+   "components" <span>private</span> => <span>array</span>(0) 
+   "cloning" <span>private</span> => NULL
+   "parent" <span>private</span> => NULL
+   "name" <span>private</span> => "Error" (5)
+   <a href='#' onclick='return !netteToggle(this)'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"NPresenter" => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => NULL
+         1 => NULL
+         2 => NULL
+         3 => TRUE
+      ]</code>
+   }</code>
+}</code>
+</pre>				</div>
+	</div>
+			
+
+
+			<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl4')">Environment <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="pnl4" class="collapsed inner">
+							<h3><a href="#" onclick="return !netteToggle(this, 'pnl-env-const')">Constants <abbr>&#x25bc;</abbr></a></h3>
+			<table id="pnl-env-const">
+			<tr><th>WWW_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www" (34)
+</pre></td></tr>
+<tr class="odd"><th>APP_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../app" (41)
+</pre></td></tr>
+<tr><th>LIBS_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../libs" (42)
+</pre></td></tr>
+<tr class="odd"><th>LOGS_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../log" (41)
+</pre></td></tr>
+<tr><th>TEMP_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../temp" (42)
+</pre></td></tr>
+<tr class="odd"><th>DBDATA_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../dbData" (44)
+</pre></td></tr>
+<tr><th>DBFILE_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../dbData/files" (50)
+</pre></td></tr>
+<tr class="odd"><th>COMPONENTS_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../app/components" (52)
+</pre></td></tr>
+<tr><th>MODELS_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../app/models" (48)
+</pre></td></tr>
+<tr class="odd"><th>LOCALE_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../app/locale" (48)
+</pre></td></tr>
+<tr><th>NETTE</th><td><pre class="dump">TRUE
+</pre></td></tr>
+<tr class="odd"><th>NETTE_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/libs/Nette" (41)
+</pre></td></tr>
+<tr><th>NETTE_VERSION_ID</th><td><pre class="dump">907
+</pre></td></tr>
+<tr class="odd"><th>NETTE_PACKAGE</th><td><pre class="dump">"PHP 5.2 prefixed" (16)
+</pre></td></tr>
+			</table>
+			
+
+			<h3><a href="#" onclick="return !netteToggle(this, 'pnl-env-files')">Included files <abbr>&#x25ba;</abbr></a>(166)</h3>
+			<table id="pnl-env-files" class="collapsed">
+			<tr><td>/Users/martin/Web/library/root/www/index.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/bootstrap.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/loader.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/shortcuts.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/exceptions.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/Framework.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/Object.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/ObjectMixin.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/Callback.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Loaders/LimitedScope.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Loaders/AutoLoader.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Loaders/NetteLoader.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Debug/Debug.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Environment/Environment.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Environment/Configurator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Environment/ServiceLocator.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Environment/IServiceLocator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/Session.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Config/Config.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Collections/Hashtable.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Collections/Collection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Collections/ICollection.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Collections/IMap.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Config/ConfigAdapterIni.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Config/IConfigAdapter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/Tools.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/ArrayTools.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Loaders/RobotLoader.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Caching/Cache.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Caching/FileStorage.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Caching/ICacheStorage.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/Application.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/Routers/MultiRouter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Collections/ArrayList.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Collections/IList.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/IRouter.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/Routers/Route.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette.Extras/MultipleFileUpload/MultipleFileUpload.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/FileUpload.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/FormControl.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/ComponentModel/Component.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/ComponentModel/IComponent.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/IFormControl.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/FormContainer.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/ComponentModel/ComponentContainer.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/ComponentModel/IComponentContainer.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/INamingContainer.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Reflection/ClassReflection.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette.Extras/MultipleFileUpload/UserInterface/Registrator/MFUUIRegistrator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette.Extras/FormMacros.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Templates/Filters/LatteMacros.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/HttpRequest.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Web/IHttpRequest.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/HttpResponse.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Web/IHttpResponse.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/UriScript.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Web/Uri.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/FreezableObject.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/String.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Security/Identity.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Security/IIdentity.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Reflection/AnnotationsParser.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Reflection/PropertyReflection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/PresenterRequest.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/PresenterLoader.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/IPresenterLoader.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/FrontModule/presenters/DefaultPresenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/FrontModule/presenters/Base/ItemsBasePresenter.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/FrontModule/presenters/Base/BasePresenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/presenters/BasePresenter.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Application/StandardPresenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Application/ActionHandlePresenter.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/Presenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/Control.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/PresenterComponent.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/ISignalReceiver.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/IStatePersistent.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/IRenderable.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/IPresenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Action/IActionContainer.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/PresenterComponentReflection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Web/MyUser.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Web/User.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/IUser.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/GettextExtractor/Translator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/ITranslator.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/Base/BaseModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Model/StandardModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Model/IModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Model/ActionModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Model/IActionModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiException.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/components/Base/BaseControl.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Application/StandardControl.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/Authentication/AclModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/dibi.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/Nette/IDebuggable.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/Nette/DateTime53.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/interfaces.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiObject.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiConnection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiResult.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiResultIterator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiRow.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiTranslator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiDataSource.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiFluent.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiDatabaseInfo.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiProfiler.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/drivers/postgre.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/PrivilegesModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/Sections.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/DataStructures/Tree/TreeModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/DataStructures/Tree/ITreeModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/AttributesModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/Sortable/SortableTreeModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/Sortable/ISortableModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/Sortable/SortableModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/Sortable/DataSorter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/AttributesGroupsModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/TypesModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/Files.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/Roles.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/Maps.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/MapItems.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/ItemsModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/UsersModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/SessionNamespace.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Reflection/MethodReflection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Action/WebAction.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Action/Action.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Action/IAction.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Action/IWebAction.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette.Extras/Collections/Hashtable.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette.Extras/Collections/Collection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Utils/Utils.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Forms/MyForm.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Forms/AdvancedForm.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/AppForm.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Form.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Web/Html.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/Link.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/Iterators/InstanceFilterIterator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Forms/AdvancedRenderer.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/Renderers/ConventionalRenderer.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/IFormRenderer.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/FormGroup.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/TextInput.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/TextBase.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Rules.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette.Extras/DependentSelectBox/DependentSelectBox.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/SelectBox.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/Checkbox.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/SubmitButton.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/Button.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/ISubmitterControl.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Templates/Template.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Templates/BaseTemplate.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Templates/ITemplate.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Templates/IFileTemplate.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/components/HeaderControl/HeaderControl.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/components/WebLoader/CssLoader.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/components/WebLoader/WebLoader.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/components/WebLoader/JavaScriptLoader.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/presenters/ErrorPresenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Debug/templates/bluescreen.phtml</td></tr>
+			</table>
+
+
+			<h3>$_SERVER</h3>
+						<table>
+			<tr><th>REDIRECT_STATUS</th><td><pre class="dump">"200" (3)
+</pre></td></tr>
+<tr class="odd"><th>HTTP_HOST</th><td><pre class="dump">"localhost:8080" (14)
+</pre></td></tr>
+<tr><th>HTTP_USER_AGENT</th><td><pre class="dump">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:6.0.1) Gecko/20100101 Firefox/6.0.1" (83)
+</pre></td></tr>
+<tr class="odd"><th>HTTP_ACCEPT</th><td><pre class="dump">"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" (63)
+</pre></td></tr>
+<tr><th>HTTP_ACCEPT_LANGUAGE</th><td><pre class="dump">"en-us,en;q=0.5" (14)
+</pre></td></tr>
+<tr class="odd"><th>HTTP_ACCEPT_ENCODING</th><td><pre class="dump">"gzip, deflate" (13)
+</pre></td></tr>
+<tr><th>HTTP_ACCEPT_CHARSET</th><td><pre class="dump">"ISO-8859-1,utf-8;q=0.7,*;q=0.7" (30)
+</pre></td></tr>
+<tr class="odd"><th>HTTP_CONNECTION</th><td><pre class="dump">"keep-alive" (10)
+</pre></td></tr>
+<tr><th>HTTP_REFERER</th><td><pre class="dump">"http://localhost:8080/library/root/www/knihovna/items/?do=formFilter-submit" (75)
+</pre></td></tr>
+<tr class="odd"><th>HTTP_COOKIE</th><td><pre class="dump">"__utma=111872281.1055277159.1314554460.1314554460.1314554460.1; __utmz=111872281.1314554460.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PPA_ID= ... " (519)
+</pre></td></tr>
+<tr><th>CONTENT_TYPE</th><td><pre class="dump">"application/x-www-form-urlencoded" (33)
+</pre></td></tr>
+<tr class="odd"><th>CONTENT_LENGTH</th><td><pre class="dump">"31" (2)
+</pre></td></tr>
+<tr><th>PATH</th><td><pre class="dump">"/Applications/mampstack-5.3.8-0/postgresql/bin:/Applications/mampstack-5.3.8-0/php/bin:/Applications/mampstack-5.3.8-0/mysql/bin:/Applications/mampsta ... " (285)
+</pre></td></tr>
+<tr class="odd"><th>SERVER_SIGNATURE</th><td><pre class="dump">""
+</pre></td></tr>
+<tr><th>SERVER_SOFTWARE</th><td><pre class="dump">"Apache" (6)
+</pre></td></tr>
+<tr class="odd"><th>SERVER_NAME</th><td><pre class="dump">"localhost" (9)
+</pre></td></tr>
+<tr><th>SERVER_ADDR</th><td><pre class="dump">"127.0.0.1" (9)
+</pre></td></tr>
+<tr class="odd"><th>SERVER_PORT</th><td><pre class="dump">"8080" (4)
+</pre></td></tr>
+<tr><th>REMOTE_ADDR</th><td><pre class="dump">"127.0.0.1" (9)
+</pre></td></tr>
+<tr class="odd"><th>DOCUMENT_ROOT</th><td><pre class="dump">"/Users/martin/Web" (17)
+</pre></td></tr>
+<tr><th>SERVER_ADMIN</th><td><pre class="dump">"you@example.com" (15)
+</pre></td></tr>
+<tr class="odd"><th>SCRIPT_FILENAME</th><td><pre class="dump">"/Users/martin/Web/library/root/www/index.php" (44)
+</pre></td></tr>
+<tr><th>REMOTE_PORT</th><td><pre class="dump">"55823" (5)
+</pre></td></tr>
+<tr class="odd"><th>REDIRECT_QUERY_STRING</th><td><pre class="dump">"do=formFilter-submit" (20)
+</pre></td></tr>
+<tr><th>REDIRECT_URL</th><td><pre class="dump">"/library/root/www/knihovna/items/" (33)
+</pre></td></tr>
+<tr class="odd"><th>GATEWAY_INTERFACE</th><td><pre class="dump">"CGI/1.1" (7)
+</pre></td></tr>
+<tr><th>SERVER_PROTOCOL</th><td><pre class="dump">"HTTP/1.1" (8)
+</pre></td></tr>
+<tr class="odd"><th>REQUEST_METHOD</th><td><pre class="dump">"POST" (4)
+</pre></td></tr>
+<tr><th>QUERY_STRING</th><td><pre class="dump">"do=formFilter-submit" (20)
+</pre></td></tr>
+<tr class="odd"><th>REQUEST_URI</th><td><pre class="dump">"/library/root/www/knihovna/items/?do=formFilter-submit" (54)
+</pre></td></tr>
+<tr><th>SCRIPT_NAME</th><td><pre class="dump">"/library/root/www/index.php" (27)
+</pre></td></tr>
+<tr class="odd"><th>PHP_SELF</th><td><pre class="dump">"/library/root/www/index.php" (27)
+</pre></td></tr>
+<tr><th>REQUEST_TIME</th><td><pre class="dump">1315215157
+</pre></td></tr>
+			</table>
+							</div>
+	</div>
+	
+
+
+			<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl5')">HTTP request <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="pnl5" class="collapsed inner">
+							<h3>Headers</h3>
+			<table>
+			<tr class="odd"><th>Host</th><td>localhost:8080</td></tr>
+<tr><th>User-Agent</th><td>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:6.0.1) Gecko/20100101 Firefox/6.0.1</td></tr>
+<tr class="odd"><th>Accept</th><td>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</td></tr>
+<tr><th>Accept-Language</th><td>en-us,en;q=0.5</td></tr>
+<tr class="odd"><th>Accept-Encoding</th><td>gzip, deflate</td></tr>
+<tr><th>Accept-Charset</th><td>ISO-8859-1,utf-8;q=0.7,*;q=0.7</td></tr>
+<tr class="odd"><th>Connection</th><td>keep-alive</td></tr>
+<tr><th>Referer</th><td>http://localhost:8080/library/root/www/knihovna/items/?do=formFilter-submit</td></tr>
+<tr class="odd"><th>Cookie</th><td>__utma=111872281.1055277159.1314554460.1314554460.1314554460.1; __utmz=111872281.1314554460.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PPA_ID=f3h2mjflco9qjmmnq24jt5d2u5; PHPSESSID=8vfipnq2mg8nti48bscqkq0p35; nette-browser=0.033205036513312; webfx-tree-cookie-persistence=wfxt-125+wfxt-111+wfxt-28+wfxt-101+wfxt-89+wfxt-177+wfxt-48+wfxt-22+wfxt-14+wfxt-12+wfxt-164+wfxt-162+wfxt-82+wfxt-148+wfxt-145+wfxt-80+wfxt-18+wfxt-117+wfxt-24+wfxt-6+wfxt-4+wfxt-8+wfxt-78+wfxt-97+wfxt-121+wfxt-76+wfxt-196+wfxt-16+wfxt-100</td></tr>
+<tr><th>Content-Type</th><td>application/x-www-form-urlencoded</td></tr>
+<tr class="odd"><th>Content-Length</th><td>31</td></tr>
+			</table>
+			
+
+						<h3>$_GET</h3>
+						<table>
+			<tr><th>do</th><td><pre class="dump">"formFilter-submit" (17)
+</pre></td></tr>
+			</table>
+									<h3>$_POST</h3>
+						<table>
+			<tr class="odd"><th>fts</th><td><pre class="dump">"david" (5)
+</pre></td></tr>
+<tr><th>user_id</th><td><pre class="dump">""
+</pre></td></tr>
+<tr class="odd"><th>ok</th><td><pre class="dump">"filtrovat" (9)
+</pre></td></tr>
+			</table>
+									<h3>$_COOKIE</h3>
+						<table>
+			<tr><th>__utma</th><td><pre class="dump">"111872281.1055277159.1314554460.1314554460.1314554460.1" (55)
+</pre></td></tr>
+<tr class="odd"><th>__utmz</th><td><pre class="dump">"111872281.1314554460.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)" (70)
+</pre></td></tr>
+<tr><th>PPA_ID</th><td><pre class="dump">"f3h2mjflco9qjmmnq24jt5d2u5" (26)
+</pre></td></tr>
+<tr class="odd"><th>PHPSESSID</th><td><pre class="dump">"8vfipnq2mg8nti48bscqkq0p35" (26)
+</pre></td></tr>
+<tr><th>nette-browser</th><td><pre class="dump">"0.033205036513312" (17)
+</pre></td></tr>
+<tr class="odd"><th>webfx-tree-cookie-persistence</th><td><pre class="dump">"wfxt-125 wfxt-111 wfxt-28 wfxt-101 wfxt-89 wfxt-177 wfxt-48 wfxt-22 wfxt-14 wfxt-12 wfxt-164 wfxt-162 wfxt-82 wfxt-148 wfxt-145 wfxt-80 wfxt-18 wfxt-1 ... " (240)
+</pre></td></tr>
+			</table>
+										</div>
+	</div>
+	
+
+
+			<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl6')">HTTP response <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="pnl6" class="collapsed inner">
+				<h3>Headers</h3>
+						<pre>X-Powered-By: Nette Framework<br>Expires: Thu, 19 Nov 1981 08:52:00 GMT<br>Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0<br>Pragma: no-cache<br>Set-Cookie: PHPSESSID=8vfipnq2mg8nti48bscqkq0p35; path=/; httponly<br>Set-Cookie: nette-browser=0.033205036513312; path=/; httponly<br></pre>
+							</div>
+	</div>
+	
+
+		<ul>
+						<li>Report generated at 2011/09/05 11:32:37
+</li><li><a href="http://localhost:8080/library/root/www/knihovna/items/?do=formFilter-submit">http://localhost:8080/library/root/www/knihovna/items/?do=formFilter-submit</a>
+</li><li>PHP 5.3.8
+</li><li>Apache
+</li><li>Nette Framework 0.9.7 <i>(revision f30d79b released on 2010-12-13)</i>
+</li>					</ul>
+	</div>
+</div>
+
+<script type="text/javascript">document.body.appendChild(document.getElementById("netteBluescreen"));</script>
+</body>
+</html>

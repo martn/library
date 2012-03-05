@@ -1,0 +1,7 @@
+{assign $title 'Upravit objekt | Položka mapy'}
+@{extends ../@layout.phtml}
+{block #left}
+    <h1>{!_"Upravit položku mapy"}</h1>
+    
+    {$form}
+{/block}    

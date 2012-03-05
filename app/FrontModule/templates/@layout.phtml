@@ -1,0 +1,60 @@
+{**
+ * My Application layout template.
+ *
+ * @copyright  Copyright (c) 2009 John Doe
+ * @package    MyApplication
+ * @version    $Id: @layout.phtml 182 2008-12-31 00:28:33Z david@grudl.com $
+ *
+ * @param string   $title    page title
+ * @param string   $robots   tell robots how to index the content of a page (optinal)
+ * @param string   $baseUri  web base URI
+ * @param array    $flashes  flash messages
+ * @param Template $content  view template
+ *}
+{widget header:begin}
+    {widget header:css 'ajax.css', 'tabcontrol.css','controls.css','smoothness/jquery-ui-1.8.9.custom.css','template.css','lytebox.css','menustyle.css','uploadify.css','prettyForms.css','tipsy.css','alerts/jquery.alerts.css','screen.css'}
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+    {widget header:js 'jquery.livequery.js', 'jquery.alerts.js', 'jquery.nette.dependentselectbox.js', 'jquery.tipsy.js', 'jquery.nette.js', 'jquery.ajaxform.js', 'common.js','MultipleFileUpload/MFUFallbackController.js'}
+    {!=MultipleFileUpload::getHead()}
+{widget header:end}
+<body>
+
+<div id="wraper">
+<div id="main">
+<div id="headerPanel">
+<div id="logo"></div>
+<!-- ========== MENU ========================--> {widget mainMenu} <!-- ========== MENU END ============ -->
+</div>
+<!-- ========== TOP PANEL ============ -->
+<div id="topPanel">
+<div class="right">
+	{if $userAuthenticated} 
+		<a href="{plink account:default}">{$user->name}</a> | 
+		<a href="{plink account:logout}">odhlásit</a> 
+	{else} 
+		<a href="{plink login:default}">přihlásit</a> 
+	{/if}
+</div>
+<div class="left">{widget pageNavigator}</div>
+</div>
+<!-- ========== TOP PANEL END ============ --> <!-- ========== MAIN PANEL ============ -->
+<div id="mainPanel">
+	@{include #content}
+</div>
+<!-- ========== MAIN END ============ --></div>
+<div id="footWrap">
+<div id="footPanel">
+<p>© Copyright All rights reserved</p>
+<p>Designed By: <a href="http://www.templateworld.com">Template World</a></p>
+</div>
+</div>
+</div>
+<!-- ========== WRAP END ============ -->
+    </body>
+</html>
+
+
+

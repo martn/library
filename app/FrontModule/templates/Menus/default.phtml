@@ -1,0 +1,13 @@
+{layout '../@doublepanel.phtml'}
+{block #left}
+    <h1>{!_"Menu"}</h1>
+    
+   {widget mapsList}
+   
+{/block}
+{block #right}
+<h2>{!_"možnosti"}</h2>
+
+    {widget defaultActionsMenu}
+
+{/block}

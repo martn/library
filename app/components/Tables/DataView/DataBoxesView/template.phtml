@@ -1,0 +1,13 @@
+<div class="dataBoxes">
+{foreach $data as $group}
+<fieldset>
+    <legend>{$group->getName()}</legend>
+    {foreach $group as $item}
+        <div class="item">
+            <div class="label">{$item['label']}:</div>
+            <div class="data">{$item['data']}</div>
+        </div>
+    {/foreach}
+</fieldset>
+{/foreach}
+</div>

@@ -1,0 +1,27 @@
+@{layout '../@doublepanel.phtml'}
+@{block #left}
+<h1>{$item->name}</h1>
+
+{widget itemView}
+
+<br/>
+
+<div class="note">
+<div class="label">poznámka:</div>
+<em>{$item->note}</em>
+</div>
+
+<h2>Soubory:</h2>
+{widget fileTable}
+
+{/block}
+{block #right}
+
+<h2>{!_"možnosti"}</h2>
+{widget itemActionsMenu}
+
+
+<h2>{!_"Info"}</h2>
+{widget infoPanel}
+
+{/block}

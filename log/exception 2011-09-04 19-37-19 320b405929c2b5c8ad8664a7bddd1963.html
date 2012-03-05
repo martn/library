@@ -1,0 +1,981 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="robots" content="noindex,noarchive">
+	<meta name="generator" content="Nette Framework">
+
+	<title>NApplicationException</title><!-- An error occured while executing error-presenter; caused by NBadRequestException Page not found. Missing template '…/templates/Error/500.phtml'. #404 -->
+
+	<style type="text/css">body{margin:0 0 2em;padding:0}#netteBluescreen{font:9pt/1.5 Verdana,sans-serif;background:white;color:#333;position:absolute;left:0;top:0;width:100%;z-index:23178;text-align:left}#netteBluescreen *{color:inherit;background:inherit;text-align:inherit}#netteBluescreenIcon{position:absolute;right:.5em;top:.5em;z-index:23179;text-decoration:none;background:red;padding:3px}#netteBluescreenIcon abbr{color:black!important}#netteBluescreen h1{font:18pt/1.5 Verdana,sans-serif!important;margin:.6em 0}#netteBluescreen h2{font:14pt/1.5 sans-serif!important;color:#888;margin:.6em 0}#netteBluescreen a{text-decoration:none;color:#4197E3}#netteBluescreen a abbr{font-family:sans-serif;color:#999}#netteBluescreen h3{font:bold 10pt/1.5 Verdana,sans-serif!important;margin:1em 0;padding:0}#netteBluescreen p{margin:.8em 0}#netteBluescreen pre,#netteBluescreen code,#netteBluescreen table{font:9pt/1.5 Consolas,monospace!important}#netteBluescreen pre,#netteBluescreen table{background:#fffbcc;padding:.4em .7em;border:1px dotted silver}#netteBluescreen table pre{padding:0;margin:0;border:none}#netteBluescreen pre.dump span{color:#c16549}#netteBluescreen pre.dump a{color:#333}#netteBluescreen div.panel{border-bottom:1px solid #eee;padding:1px 2em}#netteBluescreen div.inner{padding:.1em 1em 1em;background:#f5f5f5}#netteBluescreen table{border-collapse:collapse;width:100%}#netteBluescreen td,#netteBluescreen th{vertical-align:top;text-align:left;padding:2px 3px;border:1px solid #eeb}#netteBluescreen th{width:10%;font-weight:bold}#netteBluescreen .odd,#netteBluescreen .odd pre{background-color:#faf5c3}#netteBluescreen ul{font:7pt/1.5 Verdana,sans-serif!important;padding:1em 2em 50px}#netteBluescreen .highlight,#netteBluescreenError{background:red;color:white;font-weight:bold;font-style:normal;display:block}#netteBluescreen .line{color:#9e9e7e;font-weight:normal;font-style:normal}</style>
+
+
+	<script type="text/javascript">/*<![CDATA[*/document.write("<style> .collapsed { display: none; } </style>");function netteToggle(b,c){for(var e=b.getElementsByTagName("abbr")[0],a=c?document.getElementById(c):b.nextSibling;a.nodeType!==1;)a=a.nextSibling;var d=a.currentStyle?a.currentStyle.display=="none":getComputedStyle(a,null).display=="none";try{e.innerHTML=String.fromCharCode(d?9660:9658)}catch(f){}a.style.display=d?a.tagName.toLowerCase()==="code"?"inline":"block":"none";return true};/*]]>*/</script>
+</head>
+
+
+
+<body>
+<div id="netteBluescreen">
+	<a id="netteBluescreenIcon" href="#" onclick="return !netteToggle(this)"><abbr>&#x25bc;</abbr></a
+
+	><div>
+		<div id="netteBluescreenError" class="panel">
+			<h1>NApplicationException</h1>
+
+			<p>An error occured while executing error-presenter</p>
+		</div>
+
+
+
+				
+			
+													<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl7')">Source file <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="pnl7" class="collapsed inner">
+					<p><strong>File:</strong> /Users/martin/Web/library/root/libs/Nette/Application/Application.php &nbsp; <strong>Line:</strong> 170</p>
+				<pre><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 163:</span>    
+<span class='line'>Line 164:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">catchExceptions</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+<span class='line'>Line 165:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">onShutdown</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">$e</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 166:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;</span><span style="color: #000">$e</span><span style="color: #d24; font-weight: bold">;
+<span class='line'>Line 167:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 168:</span>    
+<span class='line'>Line 169:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">$repeatedError</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+<span class='highlight'>Line 170:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$e&nbsp;=&nbsp;new&nbsp;NApplicationException('An&nbsp;error&nbsp;occured&nbsp;while&nbsp;executing&nbsp;error-presenter',&nbsp;0,&nbsp;$e);
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 171:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 172:</span>    
+<span class='line'>Line 173:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #000">$httpResponse</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">isSent</span><span style="color: #d24; font-weight: bold">())&nbsp;{
+<span class='line'>Line 174:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$httpResponse</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">setCode</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$e&nbsp;</span><span style="color: #d24; font-weight: bold">instanceof&nbsp;</span><span style="color: #000">NBadRequestException&nbsp;</span><span style="color: #d24; font-weight: bold">?&nbsp;</span><span style="color: #000">$e</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getCode</span><span style="color: #d24; font-weight: bold">()&nbsp;:&nbsp;</span><span style="color: #000">500</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 175:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 176:</span>    
+<span class='line'>Line 177:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #000">$repeatedError&nbsp;</span><span style="color: #d24; font-weight: bold">&amp;&amp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">errorPresenter</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+</span></span></code></pre>
+					</div>
+	</div>
+				
+
+
+				<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl8')">Call stack <abbr>&#x25bc;</abbr></a></h2>
+
+		<div id="pnl8" class="inner">
+					<ol>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/app/bootstrap.php">app/<b>bootstrap.php</b></span> (132)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-0')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					NApplication->					run
+					()
+					</p>
+
+					
+
+											<pre  id="src1-0"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 125:</span>    </span><span style="color: #000">NFormContainer</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">extensionMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'NFormContainer::addRequestButtonBack'</span><span style="color: #d24; font-weight: bold">,&nbsp;array(</span><span style="color: #080">'RequestButtonHelper'</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #080">'addRequestButtonBack'</span><span style="color: #d24; font-weight: bold">));
+<span class='line'>Line 126:</span>    </span><span style="color: #000">NFormContainer</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">extensionMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">"NFormContainer::addDependentSelectBox"</span><span style="color: #d24; font-weight: bold">,&nbsp;array(</span><span style="color: #080">"DependentSelectBox"</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #080">"formAddDependentSelectBox"</span><span style="color: #d24; font-weight: bold">));
+<span class='line'>Line 127:</span>    </span><span style="color: #000">NFormContainer</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">extensionMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'NFormContainer::addDatePicker'</span><span style="color: #d24; font-weight: bold">,&nbsp;array(</span><span style="color: #080">"DatePicker"</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #080">"addDatePicker"</span><span style="color: #d24; font-weight: bold">));
+<span class='line'>Line 128:</span>    </span><span style="color: #000">FormMacros</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">register</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 129:</span>    
+<span class='line'>Line 130:</span>    
+<span class='line'>Line 131:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;Step&nbsp;5:&nbsp;Run&nbsp;the&nbsp;application!
+<span class='highlight'>Line 132:    $application-&gt;run();
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/www/index.php">www/<b>index.php</b></span> (31)					
+					<a href="#" onclick="return !netteToggle(this, 'src1-1')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+										require
+					(<a href="#" onclick="return !netteToggle(this, 'args1-1')">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="collapsed" id="args1-1">
+						<table>
+						<tr><th>#0</th><td><pre class="dump">"/Users/martin/Web/library/root/app/bootstrap.php" (48)
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="collapsed" id="src1-1"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 24:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;absolute&nbsp;filesystem&nbsp;path&nbsp;to&nbsp;the&nbsp;models&nbsp;root
+<span class='line'>Line 25:</span>    </span><span style="color: #000">define</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'MODELS_DIR'</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">APP_DIR&nbsp;</span><span style="color: #d24; font-weight: bold">.&nbsp;</span><span style="color: #080">'/models'</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 26:</span>    
+<span class='line'>Line 27:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;absolute&nbsp;filesystem&nbsp;path&nbsp;to&nbsp;the&nbsp;locale&nbsp;
+<span class='line'>Line 28:</span>    </span><span style="color: #000">define</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'LOCALE_DIR'</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">APP_DIR&nbsp;</span><span style="color: #d24; font-weight: bold">.&nbsp;</span><span style="color: #080">'/locale'</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 29:</span>    
+<span class='line'>Line 30:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;load&nbsp;bootstrap&nbsp;file
+<span class='highlight'>Line 31:    require&nbsp;APP_DIR&nbsp;.&nbsp;'/bootstrap.php';
+</span></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #d24; font-weight: bold"></span></span></code></pre>
+					
+					</li>
+					
+									</ol>
+					</div>
+	</div>
+	
+
+
+			
+
+
+			
+		
+								<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl9')">Caused by <abbr>&#x25bc;</abbr></a></h2>
+
+		<div id="pnl9" class="inner">
+					<div class="panel">
+					<h1>NBadRequestException #404</h1>
+
+					<p>Page not found. Missing template '…/templates/Error/500.phtml'.</p>
+				</div>
+			
+													<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl10')">Source file <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="pnl10" class="collapsed inner">
+					<p><strong>File:</strong> /Users/martin/Web/library/root/libs/Nette/Application/Presenter.php &nbsp; <strong>Line:</strong> 475</p>
+				<pre><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 468:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$template</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">setFile</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$file</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 469:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+<span class='line'>Line 470:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 471:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 472:</span>    
+<span class='line'>Line 473:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #000">$template</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getFile</span><span style="color: #d24; font-weight: bold">())&nbsp;{
+<span class='line'>Line 474:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$file&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">str_replace</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">NEnvironment</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">getVariable</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'appDir'</span><span style="color: #d24; font-weight: bold">),&nbsp;</span><span style="color: #080">"\xE2\x80\xA6"</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">reset</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$files</span><span style="color: #d24; font-weight: bold">));
+<span class='highlight'>Line 475:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;NBadRequestException("Page&nbsp;not&nbsp;found.&nbsp;Missing&nbsp;template&nbsp;'$file'.");
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #000"></span><span style="color: #080"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 476:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 477:</span>    
+<span class='line'>Line 478:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;layout&nbsp;template
+<span class='line'>Line 479:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d24; font-weight: bold">if&nbsp;(</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">layout&nbsp;</span><span style="color: #d24; font-weight: bold">!==&nbsp;</span><span style="color: #000">FALSE</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+<span class='line'>Line 480:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$files&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">formatLayoutTemplateFiles</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getName</span><span style="color: #d24; font-weight: bold">(),&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">layout&nbsp;</span><span style="color: #d24; font-weight: bold">?&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">layout&nbsp;</span><span style="color: #d24; font-weight: bold">:&nbsp;</span><span style="color: #080">'layout'</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 481:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(</span><span style="color: #000">$files&nbsp;</span><span style="color: #d24; font-weight: bold">as&nbsp;</span><span style="color: #000">$file</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+<span class='line'>Line 482:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">is_file</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$file</span><span style="color: #d24; font-weight: bold">))&nbsp;{
+</span></span></code></pre>
+					</div>
+	</div>
+				
+
+
+				<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl11')">Call stack <abbr>&#x25bc;</abbr></a></h2>
+
+		<div id="pnl11" class="inner">
+					<ol>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/libs/Nette/Application/Presenter.php">Application/<b>Presenter.php</b></span> (215)					
+					<a href="#" onclick="return !netteToggle(this, 'src2-0')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					NPresenter->					sendTemplate
+					()
+					</p>
+
+					
+
+											<pre class="collapsed" id="src2-0"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 208:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;save&nbsp;component&nbsp;tree&nbsp;persistent&nbsp;state
+<span class='line'>Line 209:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">saveGlobalState</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 210:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">isAjax</span><span style="color: #d24; font-weight: bold">())&nbsp;{
+<span class='line'>Line 211:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">payload</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">state&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getGlobalState</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 212:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 213:</span>    
+<span class='line'>Line 214:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;finish&nbsp;template&nbsp;rendering
+<span class='highlight'>Line 215:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;sendTemplate();
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 216:</span>    
+<span class='line'>Line 217:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(</span><span style="color: #000">NAbortException&nbsp;$e</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+<span class='line'>Line 218:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;continue&nbsp;with&nbsp;shutting&nbsp;down
+<span class='line'>Line 219:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d24; font-weight: bold">}&nbsp;</span><span style="color: #999; font-style: italic">/*&nbsp;finally&nbsp;*/&nbsp;</span><span style="color: #d24; font-weight: bold">{
+<span class='line'>Line 220:</span>    
+<span class='line'>Line 221:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;PHASE&nbsp;4:&nbsp;SHUTDOWN
+<span class='line'>Line 222:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">phase&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">self</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">PHASE_SHUTDOWN</span><span style="color: #d24; font-weight: bold">;
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/libs/Nette/Application/Application.php">Application/<b>Application.php</b></span> (144)					
+					<a href="#" onclick="return !netteToggle(this, 'src2-1')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					NPresenter->					run
+					(<a href="#" onclick="return !netteToggle(this, 'args2-1')">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="collapsed" id="args2-1">
+						<table>
+						<tr><th>$request</th><td><pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>NPresenterRequest</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+   "method" <span>private</span> => "FORWARD" (7)
+   "flags" <span>private</span> => <span>array</span>(0) 
+   "name" <span>private</span> => "Error" (5)
+   <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"exception" => <span>DibiDriverException</span>(8) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "sql" <span>private</span> => "INSERT  INTO "lib_items" ("name", "note", "type_id", "datetime_insert", "datetime_edit", "user_id") VALUES ('Josef', 'Poznamka pod', 8, '2011-09-04 19 ... " (184)
+         "message" <span>protected</span> => "ERROR:  column " " does not exist
+LINE 3: ...items_data WHERE string&lt;&gt;NULL AND item_id=new.id)," "),'')),...
+                                          ... " (570)
+         "string" <span>private</span> => "exception 'DibiDriverException' with message 'ERROR:  column " " does not exist
+LINE 3: ...items_data WHERE string&lt;&gt;NULL AND item_id=new.id)," "),'')) ... " (3784)
+         "code" <span>protected</span> => 0
+         "file" <span>protected</span> => "/Users/martin/Web/library/root/libs/dibi/drivers/postgre.php" (60)
+         "line" <span>protected</span> => 130
+         "trace" <span>private</span> => <span>array</span>(28) [ ... ]
+         "previous" <span>private</span> => NULL
+      }</code>
+   }</code>
+   "post" <span>private</span> => <span>array</span>(0) 
+   "files" <span>private</span> => <span>array</span>(0) 
+   "frozen" <span>private</span> => TRUE
+}</code>
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="collapsed" id="src2-1"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 137:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(</span><span style="color: #000">NInvalidPresenterException&nbsp;$e</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+<span class='line'>Line 138:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;</span><span style="color: #000">NBadRequestException</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #000">$e</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getMessage</span><span style="color: #d24; font-weight: bold">(),&nbsp;</span><span style="color: #000">404</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">$e</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 139:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<span class='line'>Line 140:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$request</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">freeze</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 141:</span>    
+<span class='line'>Line 142:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;Execute&nbsp;presenter
+<span class='line'>Line 143:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$this</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">presenter&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;new&nbsp;</span><span style="color: #000">$class</span><span style="color: #d24; font-weight: bold">;
+<span class='highlight'>Line 144:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$response&nbsp;=&nbsp;$this-&gt;presenter-&gt;run($request);
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"><span class='line'>Line 145:</span>    
+<span class='line'>Line 146:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999; font-style: italic">//&nbsp;Send&nbsp;response
+<span class='line'>Line 147:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d24; font-weight: bold">if&nbsp;(</span><span style="color: #000">$response&nbsp;</span><span style="color: #d24; font-weight: bold">instanceof&nbsp;</span><span style="color: #000">NForwardingResponse</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+<span class='line'>Line 148:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #000">$request&nbsp;</span><span style="color: #d24; font-weight: bold">=&nbsp;</span><span style="color: #000">$response</span><span style="color: #d24; font-weight: bold">-&gt;</span><span style="color: #000">getRequest</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 149:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;
+<span class='line'>Line 150:</span>    
+<span class='line'>Line 151:</span>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;elseif&nbsp;(</span><span style="color: #000">$response&nbsp;</span><span style="color: #d24; font-weight: bold">instanceof&nbsp;</span><span style="color: #000">IPresenterResponse</span><span style="color: #d24; font-weight: bold">)&nbsp;{
+</span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/app/bootstrap.php">app/<b>bootstrap.php</b></span> (132)					
+					<a href="#" onclick="return !netteToggle(this, 'src2-2')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+					NApplication->					run
+					()
+					</p>
+
+					
+
+											<pre  id="src2-2"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 125:</span>    </span><span style="color: #000">NFormContainer</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">extensionMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'NFormContainer::addRequestButtonBack'</span><span style="color: #d24; font-weight: bold">,&nbsp;array(</span><span style="color: #080">'RequestButtonHelper'</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #080">'addRequestButtonBack'</span><span style="color: #d24; font-weight: bold">));
+<span class='line'>Line 126:</span>    </span><span style="color: #000">NFormContainer</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">extensionMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">"NFormContainer::addDependentSelectBox"</span><span style="color: #d24; font-weight: bold">,&nbsp;array(</span><span style="color: #080">"DependentSelectBox"</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #080">"formAddDependentSelectBox"</span><span style="color: #d24; font-weight: bold">));
+<span class='line'>Line 127:</span>    </span><span style="color: #000">NFormContainer</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">extensionMethod</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'NFormContainer::addDatePicker'</span><span style="color: #d24; font-weight: bold">,&nbsp;array(</span><span style="color: #080">"DatePicker"</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #080">"addDatePicker"</span><span style="color: #d24; font-weight: bold">));
+<span class='line'>Line 128:</span>    </span><span style="color: #000">FormMacros</span><span style="color: #d24; font-weight: bold">::</span><span style="color: #000">register</span><span style="color: #d24; font-weight: bold">();
+<span class='line'>Line 129:</span>    
+<span class='line'>Line 130:</span>    
+<span class='line'>Line 131:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;Step&nbsp;5:&nbsp;Run&nbsp;the&nbsp;application!
+<span class='highlight'>Line 132:    $application-&gt;run();
+</span></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span></span></code></pre>
+					
+					</li>
+										<li><p>
+
+											<span title="/Users/martin/Web/library/root/www/index.php">www/<b>index.php</b></span> (31)					
+					<a href="#" onclick="return !netteToggle(this, 'src2-3')">source <abbr>&#x25ba;</abbr></a>&nbsp; 
+										require
+					(<a href="#" onclick="return !netteToggle(this, 'args2-3')">arguments <abbr>&#x25ba;</abbr></a>)
+					</p>
+
+											<div class="collapsed" id="args2-3">
+						<table>
+						<tr><th>#0</th><td><pre class="dump">"/Users/martin/Web/library/root/app/bootstrap.php" (48)
+</pre></td></tr>
+						</table>
+						</div>
+					
+
+											<pre class="collapsed" id="src2-3"><code><span style="color: #06b"><span style="color: #d24; font-weight: bold"><span class='line'>Line 24:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;absolute&nbsp;filesystem&nbsp;path&nbsp;to&nbsp;the&nbsp;models&nbsp;root
+<span class='line'>Line 25:</span>    </span><span style="color: #000">define</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'MODELS_DIR'</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">APP_DIR&nbsp;</span><span style="color: #d24; font-weight: bold">.&nbsp;</span><span style="color: #080">'/models'</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 26:</span>    
+<span class='line'>Line 27:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;absolute&nbsp;filesystem&nbsp;path&nbsp;to&nbsp;the&nbsp;locale&nbsp;
+<span class='line'>Line 28:</span>    </span><span style="color: #000">define</span><span style="color: #d24; font-weight: bold">(</span><span style="color: #080">'LOCALE_DIR'</span><span style="color: #d24; font-weight: bold">,&nbsp;</span><span style="color: #000">APP_DIR&nbsp;</span><span style="color: #d24; font-weight: bold">.&nbsp;</span><span style="color: #080">'/locale'</span><span style="color: #d24; font-weight: bold">);
+<span class='line'>Line 29:</span>    
+<span class='line'>Line 30:</span>    </span><span style="color: #999; font-style: italic">//&nbsp;load&nbsp;bootstrap&nbsp;file
+<span class='highlight'>Line 31:    require&nbsp;APP_DIR&nbsp;.&nbsp;'/bootstrap.php';
+</span></span><span style="color: #d24; font-weight: bold"></span><span style="color: #000"></span><span style="color: #d24; font-weight: bold"></span><span style="color: #080"></span><span style="color: #d24; font-weight: bold"></span></span></code></pre>
+					
+					</li>
+					
+									</ol>
+					</div>
+	</div>
+	
+
+
+			
+
+
+			
+						</div>
+	</div>
+	
+
+
+					<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl12')">Nette Application <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="pnl12" class="collapsed inner">
+				<h3>Requests</h3>
+			<pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>array</span>(2) <abbr>&#x25bc;</abbr> </a><code>[
+   <a href='#' onclick='return !netteToggle(this)'>0 => <span>NPresenterRequest</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "method" <span>private</span> => "POST" (4)
+      <a href='#' onclick='return !netteToggle(this)'>"flags" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "secured" => FALSE
+      }</code>
+      "name" <span>private</span> => "Front:Default" (13)
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>{
+         "action" => "new" (3)
+         "id" => "8"
+         "lang" => "cs" (2)
+         "do" => "formNew-submit" (14)
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"post" <span>private</span> => <span>array</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "name" => "Josef" (5)
+         "f170" => "Animal Mjuuuzik" (15)
+         "f169" => "Josef Vejvoda Starsi" (20)
+         "note" => "Poznamka pod" (12)
+         "upload" => <span>array</span>(1) { ... }
+         "ok" => "uložit" (7)
+         "type_id" => "8"
+      }</code>
+      "files" <span>private</span> => <span>array</span>(0) 
+      "frozen" <span>private</span> => TRUE
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>1 => <span>NPresenterRequest</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "method" <span>private</span> => "FORWARD" (7)
+      "flags" <span>private</span> => <span>array</span>(0) 
+      "name" <span>private</span> => "Error" (5)
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "exception" => <span>DibiDriverException</span>(8) { ... }
+      }</code>
+      "post" <span>private</span> => <span>array</span>(0) 
+      "files" <span>private</span> => <span>array</span>(0) 
+      "frozen" <span>private</span> => TRUE
+   }</code>
+]</code>
+</pre>
+			<h3>Presenter</h3>
+			<pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>ErrorPresenter</span>(53) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+   <a href='#' onclick='return !netteToggle(this)'>"modelPrivileges" <span>protected</span> => <span>PrivilegesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAcl" <span>protected</span> => <span>AclModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>protected</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>protected</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>AttributesModel</span>(2) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>protected</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>AttributesGroupsModel</span>(2) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelTypes" <span>protected</span> => <span>TypesModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      "selects" <span>private</span> => NULL
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>TypesModel</span>(5) { *RECURSION* }
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelFiles" <span>protected</span> => <span>FilesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelRoles" <span>protected</span> => <span>Roles</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelAcl" <span>protected</span> => <span>AclModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>protected</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "type" <span>protected</span> => "map" (3)
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMenus" <span>protected</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "type" <span>protected</span> => "menu" (4)
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMapItems" <span>protected</span> => <span>MapItems</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>private</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) { ... }
+         "tree" <span>protected</span> => NULL
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>private</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "type" <span>protected</span> => "map" (3)
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>MapItems</span>(5) { *RECURSION* }
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelMenuItems" <span>protected</span> => <span>MapItems</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelSections" <span>private</span> => <span>Sections</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "modelPrivileges" <span>private</span> => <span>PrivilegesModel</span>(1) { ... }
+         "tree" <span>protected</span> => NULL
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelMaps" <span>private</span> => <span>Maps</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "type" <span>protected</span> => "menu" (4)
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"sorter" <span>private</span> => <span>DataSorter</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "model" <span>private</span> => <span>MapItems</span>(5) { *RECURSION* }
+      }</code>
+      "tree" <span>protected</span> => NULL
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelItems" <span>protected</span> => <span>ItemsModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"modelTypes" <span>private</span> => <span>TypesModel</span>(5) <abbr>&#x25bc;</abbr> </a><code>{
+         "selects" <span>private</span> => NULL
+         "modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) { ... }
+         "modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) { ... }
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributes" <span>private</span> => <span>AttributesModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelAttributesGroups" <span>private</span> => <span>AttributesGroupsModel</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+         "sorter" <span>private</span> => <span>DataSorter</span>(1) { ... }
+         "id" <span>protected</span> => NULL
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"modelFiles" <span>private</span> => <span>FilesModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "id" <span>protected</span> => NULL
+      }</code>
+      "id" <span>protected</span> => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"modelUsers" <span>protected</span> => <span>UsersModel</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      "id" <span>protected</span> => NULL
+   }</code>
+   "oldLayoutMode" => FALSE
+   "oldModuleMode" => FALSE
+   "lang" => "cs" (2)
+   "backlink" => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"user" => <span>MyUser</span>(10) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "guestRole" => "guest" (5)
+      "authenticatedRole" => "authenticated" (13)
+      "onLoggedIn" => NULL
+      "onLoggedOut" => NULL
+      "onAuthenticated" => NULL
+      "onSignedOut" => NULL
+      "authenticationHandler" <span>private</span> => NULL
+      "authorizationHandler" <span>private</span> => NULL
+      "namespace" <span>private</span> => ""
+      <a href='#' onclick='return !netteToggle(this)'>"session" <span>private</span> => <span>NSessionNamespace</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+         "data" <span>private</span> => <span>array</span>(6) { ... }
+         "meta" <span>private</span> => <span>array</span>(1) { ... }
+         "warnOnUndefined" => FALSE
+      }</code>
+   }</code>
+   "id" => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"translator" => <span>Translator</span>(2) <abbr>&#x25bc;</abbr> </a><code>{
+      "countRegexp" => "#\%([0-9]+\$)*d#" (16)
+      "paramsRegexp" => "#\%([0-9]+\$)*[fs]#" (19)
+   }</code>
+   "stage" => 0
+   "model" => NULL
+   "token" => NULL
+   "actionModel" <span>private</span> => NULL
+   "actionName" <span>private</span> => NULL
+   "onShutdown" => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"request" <span>private</span> => <span>NPresenterRequest</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "method" <span>private</span> => "FORWARD" (7)
+      "flags" <span>private</span> => <span>array</span>(0) 
+      "name" <span>private</span> => "Error" (5)
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+         "exception" => <span>DibiDriverException</span>(8) { ... }
+      }</code>
+      "post" <span>private</span> => <span>array</span>(0) 
+      "files" <span>private</span> => <span>array</span>(0) 
+      "frozen" <span>private</span> => TRUE
+   }</code>
+   "response" <span>private</span> => NULL
+   "phase" <span>private</span> => 4
+   "autoCanonicalize" => TRUE
+   "absoluteUrls" => FALSE
+   "globalParams" <span>private</span> => <span>array</span>(0) 
+   <a href='#' onclick='return !netteToggle(this)'>"globalState" <span>private</span> => <span>array</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      "token" => NULL
+      "backlink" => NULL
+      "id" => NULL
+   }</code>
+   <a href='#' onclick='return !netteToggle(this)'>"globalStateSinces" <span>private</span> => <span>array</span>(3) <abbr>&#x25bc;</abbr> </a><code>{
+      "token" => "ActionHandlePresenter" (21)
+      "backlink" => "StandardPresenter" (17)
+      "id" => "StandardPresenter" (17)
+   }</code>
+   "action" <span>private</span> => "default" (7)
+   "view" <span>private</span> => "500" (3)
+   "layout" <span>private</span> => NULL
+   "payload" <span>private</span> => <span>stdClass</span>(0) 
+   "signalReceiver" <span>private</span> => ""
+   "signal" <span>private</span> => NULL
+   "ajaxMode" <span>private</span> => FALSE
+   "startupCheck" <span>private</span> => TRUE
+   "lastCreatedRequest" <span>private</span> => NULL
+   "lastCreatedRequestFlag" <span>private</span> => NULL
+   <a href='#' onclick='return !netteToggle(this)'>"template" <span>private</span> => <span>NTemplate</span>(7) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+      "file" <span>private</span> => NULL
+      "warnOnUndefined" => TRUE
+      <a href='#' onclick='return !netteToggle(this)'>"onPrepareFilters" => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>array</span>(2) [ ... ]
+      ]</code>
+      <a href='#' onclick='return !netteToggle(this)'>"params" <span>private</span> => <span>array</span>(12) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "component" => <span>ErrorPresenter</span>(53) { *RECURSION* }
+         "control" => <span>ErrorPresenter</span>(53) { *RECURSION* }
+         "presenter" => <span>ErrorPresenter</span>(53) { *RECURSION* }
+         "baseUri" => "/library/root/www/" (18)
+         "basePath" => "/library/root/www" (17)
+         "flashes" => <span>array</span>(0) 
+         "lang" => "cs" (2)
+         "id" => NULL
+         "user" => <span>NIdentity</span>(4) { ... }
+         "userAuthenticated" => TRUE
+         "robots" => "noindex,noarchive" (17)
+         "title" => "500 Internal Server Error" (25)
+      }</code>
+      "filters" <span>private</span> => <span>array</span>(0) 
+      <a href='#' onclick='return !netteToggle(this)'>"helpers" <span>private</span> => <span>array</span>(9) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "escape" => <span>NCallback</span>(1) { ... }
+         "escapeurl" => <span>NCallback</span>(1) { ... }
+         "striptags" => <span>NCallback</span>(1) { ... }
+         "nl2br" => <span>NCallback</span>(1) { ... }
+         "substr" => <span>NCallback</span>(1) { ... }
+         "repeat" => <span>NCallback</span>(1) { ... }
+         "implode" => <span>NCallback</span>(1) { ... }
+         "number" => <span>NCallback</span>(1) { ... }
+         "translate" => <span>NCallback</span>(1) { ... }
+      }</code>
+      <a href='#' onclick='return !netteToggle(this)'>"helperLoaders" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => <span>NCallback</span>(1) { ... }
+      ]</code>
+   }</code>
+   "invalidSnippets" <span>private</span> => <span>array</span>(0) 
+   <a href='#' onclick='return !netteToggle(this)'>"params" <span>protected</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"exception" => <span>DibiDriverException</span>(8) <abbr>&#x25ba;</abbr> </a><code class="collapsed">{
+         "sql" <span>private</span> => "INSERT  INTO "lib_items" ("name", "note", "type_id", "datetime_insert", "datetime_edit", "user_id") VALUES ('Josef', 'Poznamka pod', 8, '2011-09-04 19 ... " (184)
+         "message" <span>protected</span> => "ERROR:  column " " does not exist
+LINE 3: ...items_data WHERE string&lt;&gt;NULL AND item_id=new.id)," "),'')),...
+                                          ... " (570)
+         "string" <span>private</span> => "exception 'DibiDriverException' with message 'ERROR:  column " " does not exist
+LINE 3: ...items_data WHERE string&lt;&gt;NULL AND item_id=new.id)," "),'')) ... " (3784)
+         "code" <span>protected</span> => 0
+         "file" <span>protected</span> => "/Users/martin/Web/library/root/libs/dibi/drivers/postgre.php" (60)
+         "line" <span>protected</span> => 130
+         "trace" <span>private</span> => <span>array</span>(28) [ ... ]
+         "previous" <span>private</span> => NULL
+      }</code>
+   }</code>
+   "components" <span>private</span> => <span>array</span>(0) 
+   "cloning" <span>private</span> => NULL
+   "parent" <span>private</span> => NULL
+   "name" <span>private</span> => "Error" (5)
+   <a href='#' onclick='return !netteToggle(this)'>"monitors" <span>private</span> => <span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+      <a href='#' onclick='return !netteToggle(this)'>"NPresenter" => <span>array</span>(4) <abbr>&#x25bc;</abbr> </a><code>[
+         0 => NULL
+         1 => NULL
+         2 => NULL
+         3 => TRUE
+      ]</code>
+   }</code>
+}</code>
+</pre>				</div>
+	</div>
+			
+
+
+			<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl13')">Environment <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="pnl13" class="collapsed inner">
+							<h3><a href="#" onclick="return !netteToggle(this, 'pnl-env-const')">Constants <abbr>&#x25bc;</abbr></a></h3>
+			<table id="pnl-env-const">
+			<tr><th>WWW_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www" (34)
+</pre></td></tr>
+<tr class="odd"><th>APP_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../app" (41)
+</pre></td></tr>
+<tr><th>LIBS_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../libs" (42)
+</pre></td></tr>
+<tr class="odd"><th>LOGS_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../log" (41)
+</pre></td></tr>
+<tr><th>TEMP_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../temp" (42)
+</pre></td></tr>
+<tr class="odd"><th>DBDATA_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../dbData" (44)
+</pre></td></tr>
+<tr><th>DBFILE_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../dbData/files" (50)
+</pre></td></tr>
+<tr class="odd"><th>COMPONENTS_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../app/components" (52)
+</pre></td></tr>
+<tr><th>MODELS_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../app/models" (48)
+</pre></td></tr>
+<tr class="odd"><th>LOCALE_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/www/../app/locale" (48)
+</pre></td></tr>
+<tr><th>NETTE</th><td><pre class="dump">TRUE
+</pre></td></tr>
+<tr class="odd"><th>NETTE_DIR</th><td><pre class="dump">"/Users/martin/Web/library/root/libs/Nette" (41)
+</pre></td></tr>
+<tr><th>NETTE_VERSION_ID</th><td><pre class="dump">907
+</pre></td></tr>
+<tr class="odd"><th>NETTE_PACKAGE</th><td><pre class="dump">"PHP 5.2 prefixed" (16)
+</pre></td></tr>
+			</table>
+			
+
+			<h3><a href="#" onclick="return !netteToggle(this, 'pnl-env-files')">Included files <abbr>&#x25ba;</abbr></a>(170)</h3>
+			<table id="pnl-env-files" class="collapsed">
+			<tr><td>/Users/martin/Web/library/root/www/index.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/bootstrap.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/loader.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/shortcuts.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/exceptions.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/Framework.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/Object.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/ObjectMixin.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/Callback.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Loaders/LimitedScope.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Loaders/AutoLoader.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Loaders/NetteLoader.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Debug/Debug.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Environment/Environment.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Environment/Configurator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Environment/ServiceLocator.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Environment/IServiceLocator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/Session.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Config/Config.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Collections/Hashtable.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Collections/Collection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Collections/ICollection.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Collections/IMap.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Config/ConfigAdapterIni.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Config/IConfigAdapter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/Tools.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/ArrayTools.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Loaders/RobotLoader.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Caching/Cache.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Caching/FileStorage.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Caching/ICacheStorage.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/Application.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/Routers/MultiRouter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Collections/ArrayList.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Collections/IList.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/IRouter.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/Routers/Route.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette.Extras/MultipleFileUpload/MultipleFileUpload.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/FileUpload.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/FormControl.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/ComponentModel/Component.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/ComponentModel/IComponent.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/IFormControl.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/FormContainer.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/ComponentModel/ComponentContainer.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/ComponentModel/IComponentContainer.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/INamingContainer.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Reflection/ClassReflection.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette.Extras/MultipleFileUpload/UserInterface/Registrator/MFUUIRegistrator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette.Extras/FormMacros.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Templates/Filters/LatteMacros.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/HttpRequest.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Web/IHttpRequest.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/HttpResponse.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Web/IHttpResponse.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/UriScript.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Web/Uri.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/FreezableObject.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/String.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Security/Identity.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Security/IIdentity.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Reflection/AnnotationsParser.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Reflection/PropertyReflection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/PresenterRequest.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/PresenterLoader.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/IPresenterLoader.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/FrontModule/presenters/DefaultPresenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/FrontModule/presenters/Base/ItemsBasePresenter.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/FrontModule/presenters/Base/BasePresenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/presenters/BasePresenter.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Application/StandardPresenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Application/ActionHandlePresenter.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/Presenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/Control.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/PresenterComponent.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/ISignalReceiver.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/IStatePersistent.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/IRenderable.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/IPresenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Action/IActionContainer.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/PresenterComponentReflection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Web/MyUser.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Web/User.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/IUser.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/GettextExtractor/Translator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Utils/ITranslator.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/Base/BaseModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Model/StandardModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Model/IModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Model/ActionModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Model/IActionModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiException.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/components/Base/BaseControl.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Application/StandardControl.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/Authentication/AclModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/dibi.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/Nette/IDebuggable.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/Nette/DateTime53.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/interfaces.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiObject.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiConnection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiResult.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiResultIterator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiRow.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiTranslator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiDataSource.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiFluent.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiDatabaseInfo.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/dibi/libs/DibiProfiler.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/dibi/drivers/postgre.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/PrivilegesModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/Sections.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/DataStructures/Tree/TreeModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/DataStructures/Tree/ITreeModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/AttributesModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/Sortable/SortableTreeModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/Sortable/ISortableModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/Sortable/SortableModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/Sortable/DataSorter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/AttributesGroupsModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/TypesModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/Files.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/Roles.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/Maps.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/MapItems.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/app/models/ItemsModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/models/UsersModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Web/SessionNamespace.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Reflection/MethodReflection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Action/WebAction.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Action/Action.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Action/IAction.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Action/IWebAction.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette.Extras/Collections/Hashtable.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette.Extras/Collections/Collection.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Utils/Utils.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/MyLib/Forms/MyForm.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Forms/AdvancedForm.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/AppForm.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Form.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Web/Html.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/Link.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Utils/Iterators/InstanceFilterIterator.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/MyLib/Forms/AdvancedRenderer.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/Renderers/ConventionalRenderer.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/IFormRenderer.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/SubmitButton.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/Button.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/ISubmitterControl.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Rules.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/FormGroup.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/TextInput.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/TextBase.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Rule.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/TextArea.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Forms/Controls/HiddenField.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette.Extras/MultipleFileUpload/Models/SQLite/MFUQueuesSQLite.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette.Extras/MultipleFileUpload/Models/BaseQueuesModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette.Extras/MultipleFileUpload/Models/IMFUQueuesModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette.Extras/MultipleFileUpload/Models/SQLite/MFUQueueSQLite.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette.Extras/MultipleFileUpload/Models/BaseQueueModel.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette.Extras/MultipleFileUpload/Models/IMFUQueueModel.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/app/presenters/ErrorPresenter.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Templates/Template.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Templates/BaseTemplate.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Templates/ITemplate.php</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Templates/IFileTemplate.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Debug/templates/bluescreen.phtml</td></tr>
+<tr><td>/Users/martin/Web/library/root/libs/Nette/Application/Exceptions/BadRequestException.php</td></tr>
+<tr class="odd"><td>/Users/martin/Web/library/root/libs/Nette/Application/Exceptions/ApplicationException.php</td></tr>
+			</table>
+
+
+			<h3>$_SERVER</h3>
+						<table>
+			<tr><th>REDIRECT_STATUS</th><td><pre class="dump">"200" (3)
+</pre></td></tr>
+<tr class="odd"><th>HTTP_HOST</th><td><pre class="dump">"localhost:8080" (14)
+</pre></td></tr>
+<tr><th>HTTP_USER_AGENT</th><td><pre class="dump">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:6.0.1) Gecko/20100101 Firefox/6.0.1" (83)
+</pre></td></tr>
+<tr class="odd"><th>HTTP_ACCEPT</th><td><pre class="dump">"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" (63)
+</pre></td></tr>
+<tr><th>HTTP_ACCEPT_LANGUAGE</th><td><pre class="dump">"en-us,en;q=0.5" (14)
+</pre></td></tr>
+<tr class="odd"><th>HTTP_ACCEPT_ENCODING</th><td><pre class="dump">"gzip, deflate" (13)
+</pre></td></tr>
+<tr><th>HTTP_ACCEPT_CHARSET</th><td><pre class="dump">"ISO-8859-1,utf-8;q=0.7,*;q=0.7" (30)
+</pre></td></tr>
+<tr class="odd"><th>HTTP_CONNECTION</th><td><pre class="dump">"keep-alive" (10)
+</pre></td></tr>
+<tr><th>HTTP_REFERER</th><td><pre class="dump">"http://localhost:8080/library/root/www/knihovna/novy/8" (54)
+</pre></td></tr>
+<tr class="odd"><th>HTTP_COOKIE</th><td><pre class="dump">"__utma=111872281.1055277159.1314554460.1314554460.1314554460.1; __utmz=111872281.1314554460.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PPA_ID= ... " (508)
+</pre></td></tr>
+<tr><th>CONTENT_TYPE</th><td><pre class="dump">"application/x-www-form-urlencoded" (33)
+</pre></td></tr>
+<tr class="odd"><th>CONTENT_LENGTH</th><td><pre class="dump">"141" (3)
+</pre></td></tr>
+<tr><th>PATH</th><td><pre class="dump">"/Applications/mampstack-5.3.8-0/postgresql/bin:/Applications/mampstack-5.3.8-0/php/bin:/Applications/mampstack-5.3.8-0/mysql/bin:/Applications/mampsta ... " (285)
+</pre></td></tr>
+<tr class="odd"><th>SERVER_SIGNATURE</th><td><pre class="dump">""
+</pre></td></tr>
+<tr><th>SERVER_SOFTWARE</th><td><pre class="dump">"Apache" (6)
+</pre></td></tr>
+<tr class="odd"><th>SERVER_NAME</th><td><pre class="dump">"localhost" (9)
+</pre></td></tr>
+<tr><th>SERVER_ADDR</th><td><pre class="dump">"127.0.0.1" (9)
+</pre></td></tr>
+<tr class="odd"><th>SERVER_PORT</th><td><pre class="dump">"8080" (4)
+</pre></td></tr>
+<tr><th>REMOTE_ADDR</th><td><pre class="dump">"127.0.0.1" (9)
+</pre></td></tr>
+<tr class="odd"><th>DOCUMENT_ROOT</th><td><pre class="dump">"/Users/martin/Web" (17)
+</pre></td></tr>
+<tr><th>SERVER_ADMIN</th><td><pre class="dump">"you@example.com" (15)
+</pre></td></tr>
+<tr class="odd"><th>SCRIPT_FILENAME</th><td><pre class="dump">"/Users/martin/Web/library/root/www/index.php" (44)
+</pre></td></tr>
+<tr><th>REMOTE_PORT</th><td><pre class="dump">"52986" (5)
+</pre></td></tr>
+<tr class="odd"><th>REDIRECT_QUERY_STRING</th><td><pre class="dump">"do=formNew-submit" (17)
+</pre></td></tr>
+<tr><th>REDIRECT_URL</th><td><pre class="dump">"/library/root/www/knihovna/novy/8" (33)
+</pre></td></tr>
+<tr class="odd"><th>GATEWAY_INTERFACE</th><td><pre class="dump">"CGI/1.1" (7)
+</pre></td></tr>
+<tr><th>SERVER_PROTOCOL</th><td><pre class="dump">"HTTP/1.1" (8)
+</pre></td></tr>
+<tr class="odd"><th>REQUEST_METHOD</th><td><pre class="dump">"POST" (4)
+</pre></td></tr>
+<tr><th>QUERY_STRING</th><td><pre class="dump">"do=formNew-submit" (17)
+</pre></td></tr>
+<tr class="odd"><th>REQUEST_URI</th><td><pre class="dump">"/library/root/www/knihovna/novy/8?do=formNew-submit" (51)
+</pre></td></tr>
+<tr><th>SCRIPT_NAME</th><td><pre class="dump">"/library/root/www/index.php" (27)
+</pre></td></tr>
+<tr class="odd"><th>PHP_SELF</th><td><pre class="dump">"/library/root/www/index.php" (27)
+</pre></td></tr>
+<tr><th>REQUEST_TIME</th><td><pre class="dump">1315157838
+</pre></td></tr>
+			</table>
+							</div>
+	</div>
+	
+
+
+			<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl14')">HTTP request <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="pnl14" class="collapsed inner">
+							<h3>Headers</h3>
+			<table>
+			<tr class="odd"><th>Host</th><td>localhost:8080</td></tr>
+<tr><th>User-Agent</th><td>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:6.0.1) Gecko/20100101 Firefox/6.0.1</td></tr>
+<tr class="odd"><th>Accept</th><td>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</td></tr>
+<tr><th>Accept-Language</th><td>en-us,en;q=0.5</td></tr>
+<tr class="odd"><th>Accept-Encoding</th><td>gzip, deflate</td></tr>
+<tr><th>Accept-Charset</th><td>ISO-8859-1,utf-8;q=0.7,*;q=0.7</td></tr>
+<tr class="odd"><th>Connection</th><td>keep-alive</td></tr>
+<tr><th>Referer</th><td>http://localhost:8080/library/root/www/knihovna/novy/8</td></tr>
+<tr class="odd"><th>Cookie</th><td>__utma=111872281.1055277159.1314554460.1314554460.1314554460.1; __utmz=111872281.1314554460.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PPA_ID=f3h2mjflco9qjmmnq24jt5d2u5; PHPSESSID=8vfipnq2mg8nti48bscqkq0p35; nette-browser=0.033205036513312; webfx-tree-cookie-persistence=wfxt-16+wfxt-196+wfxt-76+wfxt-72+wfxt-74+wfxt-121+wfxt-97+wfxt-127+wfxt-78+wfxt-8+wfxt-4+wfxt-6+wfxt-24+wfxt-117+wfxt-18+wfxt-80+wfxt-145+wfxt-148+wfxt-82+wfxt-88+wfxt-46+wfxt-162+wfxt-164+wfxt-12+wfxt-14+wfxt-22+wfxt-48+wfxt-177</td></tr>
+<tr><th>Content-Type</th><td>application/x-www-form-urlencoded</td></tr>
+<tr class="odd"><th>Content-Length</th><td>141</td></tr>
+			</table>
+			
+
+						<h3>$_GET</h3>
+						<table>
+			<tr><th>do</th><td><pre class="dump">"formNew-submit" (14)
+</pre></td></tr>
+			</table>
+									<h3>$_POST</h3>
+						<table>
+			<tr class="odd"><th>name</th><td><pre class="dump">"Josef" (5)
+</pre></td></tr>
+<tr><th>f170</th><td><pre class="dump">"Animal Mjuuuzik" (15)
+</pre></td></tr>
+<tr class="odd"><th>f169</th><td><pre class="dump">"Josef Vejvoda Starsi" (20)
+</pre></td></tr>
+<tr><th>note</th><td><pre class="dump">"Poznamka pod" (12)
+</pre></td></tr>
+<tr class="odd"><th>upload</th><td><pre class="dump"><a href='#' onclick='return !netteToggle(this)'><span>array</span>(1) <abbr>&#x25bc;</abbr> </a><code>{
+   "token" => "6433196414e63b72edb4d1" (22)
+}</code>
+</pre></td></tr>
+<tr><th>ok</th><td><pre class="dump">"uložit" (7)
+</pre></td></tr>
+<tr class="odd"><th>type_id</th><td><pre class="dump">"8"
+</pre></td></tr>
+			</table>
+									<h3>$_COOKIE</h3>
+						<table>
+			<tr><th>__utma</th><td><pre class="dump">"111872281.1055277159.1314554460.1314554460.1314554460.1" (55)
+</pre></td></tr>
+<tr class="odd"><th>__utmz</th><td><pre class="dump">"111872281.1314554460.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)" (70)
+</pre></td></tr>
+<tr><th>PPA_ID</th><td><pre class="dump">"f3h2mjflco9qjmmnq24jt5d2u5" (26)
+</pre></td></tr>
+<tr class="odd"><th>PHPSESSID</th><td><pre class="dump">"8vfipnq2mg8nti48bscqkq0p35" (26)
+</pre></td></tr>
+<tr><th>nette-browser</th><td><pre class="dump">"0.033205036513312" (17)
+</pre></td></tr>
+<tr class="odd"><th>webfx-tree-cookie-persistence</th><td><pre class="dump">"wfxt-16 wfxt-196 wfxt-76 wfxt-72 wfxt-74 wfxt-121 wfxt-97 wfxt-127 wfxt-78 wfxt-8 wfxt-4 wfxt-6 wfxt-24 wfxt-117 wfxt-18 wfxt-80 wfxt-145 wfxt-148 wfx ... " (229)
+</pre></td></tr>
+			</table>
+										</div>
+	</div>
+	
+
+
+			<div class="panel">
+		<h2><a href="#" onclick="return !netteToggle(this, 'pnl15')">HTTP response <abbr>&#x25ba;</abbr></a></h2>
+
+		<div id="pnl15" class="collapsed inner">
+				<h3>Headers</h3>
+						<pre>X-Powered-By: Nette Framework<br>Expires: Thu, 19 Nov 1981 08:52:00 GMT<br>Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0<br>Pragma: no-cache<br>Set-Cookie: PHPSESSID=8vfipnq2mg8nti48bscqkq0p35; path=/; httponly<br>Set-Cookie: nette-browser=0.033205036513312; path=/; httponly<br></pre>
+							</div>
+	</div>
+	
+
+		<ul>
+						<li>Report generated at 2011/09/04 19:37:18
+</li><li><a href="http://localhost:8080/library/root/www/knihovna/novy/8?do=formNew-submit">http://localhost:8080/library/root/www/knihovna/novy/8?do=formNew-submit</a>
+</li><li>PHP 5.3.8
+</li><li>Apache
+</li><li>Nette Framework 0.9.7 <i>(revision f30d79b released on 2010-12-13)</i>
+</li>					</ul>
+	</div>
+</div>
+
+<script type="text/javascript">document.body.appendChild(document.getElementById("netteBluescreen"));</script>
+</body>
+</html>

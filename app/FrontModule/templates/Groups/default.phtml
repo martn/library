@@ -1,0 +1,12 @@
+{layout '../@doublepanel.phtml'}
+@{block #left}
+    <h1>{!_"Uživatelské skupiny"}</h1>
+
+   @{widget groupsTable}
+    
+@{/block}
+{block #right}
+<h2>{!_"možnosti"}</h2>
+
+    {widget defaultActionsMenu}
+{/block}

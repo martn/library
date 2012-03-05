@@ -1,0 +1,14 @@
+{layout '../@doublepanel.phtml'}
+{block #left}
+    <h1>{!_"Úprava mapy"}</h1>
+
+    {widget formEdit}
+
+    {widget mapItemsTable}
+{/block}
+{block #right}
+<h2>{!_"možnosti"}</h2>
+
+    {control editActionsMenu}
+
+{/block}

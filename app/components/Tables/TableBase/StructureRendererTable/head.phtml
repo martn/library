@@ -1,0 +1,7 @@
+{if $control->paginator}<tr><td colspan="{$columns->count()}">{control vp}</td></tr>{/if}
+<tr>
+    {foreach $columns as $col}
+    <th {if $iterator->first}class="first"{/if}>{$col['label']}</th>
+    {/foreach}
+    <th class="last">&nbsp;</th>
+</tr>

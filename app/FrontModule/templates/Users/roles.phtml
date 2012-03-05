@@ -1,0 +1,18 @@
+{layout '../@doublepanel.phtml'}
+{block #left}
+
+   <h1>{!_"Uživatelské skupiny"} - {$userdata->name} {$userdata->surname}</h1>
+
+   {control userRoles}
+                
+   <br/>                
+   <br/>
+   <hr/>
+   <br/>
+   
+   <a class="button" href="{plink default}">zavřít</a>
+{/block}
+{block #right}
+	<h2>Možnosti</h2>
+	{control formAddUserToRole}
+{/block}

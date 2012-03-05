@@ -1,0 +1,17 @@
+@{layout '../@singlepanel.phtml'}
+@{block #panel}
+<h1>{!_"Hledat..."} {if !empty($fulltext)}"{$fulltext}"{/if}</h1>
+
+<div class="itemsLeft">
+    {widget formFilter}
+</div>
+<div class="itemsRight">
+    
+    
+    
+    {widget resultTable}
+</div>
+@{/block}
+
+
+

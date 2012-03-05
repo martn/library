@@ -1,0 +1,8 @@
+{if $data!=null}
+	{if $data->countChilds()>0}
+		 <a href="{plink $data->link}">{$data->name}</a> &nbsp; » &nbsp;  	
+		{include template_body.phtml, 'data'=>$data->lastChild()}
+	{else}
+		 {$data->name}
+	{/if}
+{/if}

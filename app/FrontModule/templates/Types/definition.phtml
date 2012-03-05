@@ -1,0 +1,19 @@
+@{layout '../@doublepanel.phtml'}
+@{block #left}
+    <h1>{!_"Definice polí typu '".$typeData['name']."'"}</h1>
+
+    {if isset($add_menu)}
+	<div class="right">{!$add_menu}</div>
+	{/if}
+
+   
+    @{widget tableTypeDefinition}
+
+    <h2>Přidat skupinu</h2>
+    @{widget addGroupTabControl}
+    
+@{/block}
+@{block #right}
+<h2>Možnosti</h2>
+@{control definitionActionsMenu}
+@{/block}

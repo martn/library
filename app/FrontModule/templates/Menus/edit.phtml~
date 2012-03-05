@@ -1,0 +1,18 @@
+{assign $title 'Úprava | Mapa'}
+@{extends ../@layout.phtml}
+{block #left}
+    <h1>{!_"Úprava menu"}</h1>
+    
+    {if isset($form)}{$form}{/if}
+    
+    {!$table}
+{/block}
+{block #right}
+{if isset($editor_menu)}
+<h2>{!_"možnosti"}</h2>
+    <hr/>
+    <br/>
+    {!$editor_menu}
+   
+{/if} 
+{/block}

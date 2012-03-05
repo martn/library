@@ -1,0 +1,13 @@
+<table cellpadding="0" cellspacing="0" border="0" class="dataTable">
+{foreach $data as $group}
+<tr><td class="group-name">{$group->getName()}</td></tr>
+<tr>
+{foreach $group as $item}
+        <td class="item">
+            <div class="label">{$item['label']}:</div>
+            <div class="data">{$item['data']}</div>
+        </td>
+{/foreach}
+</tr>
+{/foreach}
+</table>

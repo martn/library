@@ -1,0 +1,5 @@
+<td class="{if !$first}subrow {/if}label">{$node->label}:</td>
+<td class="data">{$node->data}</td>
+{foreach $node->getChilds() as $child}
+	{include @subrow.phtml, 'node'=>$child, 'first'=>false}
+{/foreach}

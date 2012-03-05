@@ -1,0 +1,7 @@
+<tr>
+    {foreach $heads as $head}
+    <th {if $iterator->first}class="first"{/if}>{$head}</th>
+    {/foreach}
+    {for $i=0;$i<$overhead;$i++}<th>&nbsp;</th>{/for}
+    <th class="last">&nbsp;</th>
+</tr>

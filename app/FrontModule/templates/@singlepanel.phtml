@@ -1,0 +1,8 @@
+@{layout '@layout.phtml'} 
+@{block #content}
+	<div id="panel">
+	{snippet flashes} {foreach $flashes as $flash}
+		<div class="flash flash_{$flash->type}">{!$flash->message}</div>
+	{/foreach} {/snippet} 
+	@{include #panel}
+	</div>

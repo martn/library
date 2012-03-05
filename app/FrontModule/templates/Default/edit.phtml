@@ -1,0 +1,21 @@
+@{layout '../@doublepanel.phtml'}
+@{block #left}
+<h1>{!_"Úprava položky"} - {$data->name}</h1>
+
+{snippet formSnippet}
+    {widget formEdit}
+{/snippet}
+@{/block}
+
+@{block #right}
+<h2>{!_"Info"}</h2>
+
+{widget infoPanel}
+
+<h2>Soubory:</h2>
+
+{snippet filesTable}
+    {widget fileTableEdit}
+{/snippet}
+
+@{/block}

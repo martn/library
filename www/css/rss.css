@@ -1,0 +1,71 @@
+channel {
+    margin: 10px;  
+    width: 100%; 
+    font-family: "Trebuchet MS", "Bitstream Vera Sans", verdana, lucida, arial, helvetica, sans-serif;
+    background: White; 
+    font-size: medium;
+}
+managingEditor, webMaster, title, link, description, copyright, lastBuildDate, pubDate { 
+    display: block; 
+    font-size: medium; 
+}
+rss, item title, item link, item description, item pubDate { 
+    background: white; 
+    display: block; 
+    font-size: medium; 
+    font-weight: normal; 
+}
+image, image title, image height, image width, image url, category, ttl, generator, guid, language, docs { 
+    display: none; 
+}
+channel { 
+    width: 100%; 
+    max-width:800px; 
+    margin:0 auto 0 auto; 
+    padding: 10px; 
+    text-align: center; 
+}
+item { 
+    margin: 20px 0px 20px 0px; 
+    line-height: 150%; 
+    text-align: left; 
+    padding: 10px; 
+    width: 100%; 
+    border-bottom: 2px solid blue; 
+    display: block; 
+    font-size: small; 
+}
+channel title { 
+    font-size: large; 
+    display: block; 
+    height: auto; 
+    position: relative; z-index: 1; 
+    font-weight: bold; 
+}
+item title { 
+    font-size: large; 
+    display: block; 
+    height: auto; 
+    position: relative; 
+    z-index: 1; 
+    font-weight: normal; 
+}
+item link { 
+    margin-bottom: 10px; 
+}
+link, comments { 
+    display: block; 
+    color: blue; 
+    text-decoration: underline; 
+}
+info { 
+    display: block; 
+    margin: 3em 4em 3em 4em; 
+    color: Black; 
+    background: #FFFACD; 
+    border: solid #CCCC66 2px; 
+    text-align: center; 
+    padding: 1.5em; 
+    font-family: mono; 
+    font-size: small; 
+}

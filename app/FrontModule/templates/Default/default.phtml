@@ -1,0 +1,22 @@
+@{layout '../@doublepanel.phtml'}
+@{block left}
+<h1>{!_"Knihovna"}</h1>
+
+
+
+@{/block}
+@{block right}
+<h2>{!_"možnosti"}</h2>
+
+    {widget defaultActions}
+    <br/>
+    <hr/>
+    <br/>
+
+    {if $count<5}
+{!_"V knihovně jsou"} {$count} {!_"položky"}.
+{else}
+{!_"V knihovně je"} {$count} {!_"položek"}.
+{/if}
+
+@{/block}
